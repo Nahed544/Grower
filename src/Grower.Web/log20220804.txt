@@ -1,0 +1,209 @@
+2022-08-04 09:34:03.363 +02:00 [INF] User profile is available. Using 'C:\Users\Swift LTD\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-04 09:34:05.520 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:34:06.207 +02:00 [INF] Executed DbCommand (271ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2022-08-04 09:34:06.441 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Projects" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Projects" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Priority" INTEGER NOT NULL
+);
+2022-08-04 09:34:06.442 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ToDoItems" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_ToDoItems" PRIMARY KEY AUTOINCREMENT,
+    "Title" TEXT NOT NULL,
+    "Description" TEXT NOT NULL,
+    "IsDone" INTEGER NOT NULL,
+    "ProjectId" INTEGER NULL,
+    CONSTRAINT "FK_ToDoItems_Projects_ProjectId" FOREIGN KEY ("ProjectId") REFERENCES "Projects" ("Id")
+);
+2022-08-04 09:34:06.442 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ToDoItems_ProjectId" ON "ToDoItems" ("ProjectId");
+2022-08-04 09:34:06.608 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:34:07.116 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ToDoItems" AS "t")
+2022-08-04 09:34:07.224 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Name", "p"."Priority"
+FROM "Projects" AS "p"
+2022-08-04 09:34:07.232 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."Description", "t"."IsDone", "t"."ProjectId", "t"."Title"
+FROM "ToDoItems" AS "t"
+2022-08-04 09:34:07.657 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 12), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Projects" ("Name", "Priority")
+VALUES (@p0, @p1);
+SELECT "Id"
+FROM "Projects"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-08-04 09:34:07.705 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (Size = 31), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ToDoItems" ("Description", "IsDone", "ProjectId", "Title")
+VALUES (@p2, @p3, @p4, @p5);
+SELECT "Id"
+FROM "ToDoItems"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-08-04 09:34:07.706 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 81), @p1='?' (DbType = Boolean), @p2='?' (DbType = Int32), @p3='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ToDoItems" ("Description", "IsDone", "ProjectId", "Title")
+VALUES (@p0, @p1, @p2, @p3);
+SELECT "Id"
+FROM "ToDoItems"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-08-04 09:34:07.708 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 59), @p1='?' (DbType = Boolean), @p2='?' (DbType = Int32), @p3='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ToDoItems" ("Description", "IsDone", "ProjectId", "Title")
+VALUES (@p0, @p1, @p2, @p3);
+SELECT "Id"
+FROM "ToDoItems"
+WHERE changes() = 1 AND "rowid" = last_insert_rowid();
+2022-08-04 09:34:08.056 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-04 09:34:08.056 +02:00 [INF] Hosting environment: Development
+2022-08-04 09:34:08.056 +02:00 [INF] Content root path: D:\Projects\Grower\src\Grower.Web\
+2022-08-04 09:34:08.153 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-08-04 09:34:08.233 +02:00 [WRN] Failed to determine the https port for redirect.
+2022-08-04 09:34:08.286 +02:00 [INF] Executing endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-04 09:34:08.299 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Grower.Web.Controllers.HomeController (Grower.Web).
+2022-08-04 09:34:08.315 +02:00 [INF] Executing ViewResult, running view Index.
+2022-08-04 09:34:08.811 +02:00 [INF] Executed ViewResult - view Index executed in 497.0443ms.
+2022-08-04 09:34:08.819 +02:00 [INF] Executed action Grower.Web.Controllers.HomeController.Index (Grower.Web) in 519.5269ms
+2022-08-04 09:34:08.820 +02:00 [INF] Executed endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-04 09:34:08.914 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2022-08-04 09:34:08.914 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2022-08-04 09:34:08.914 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Grower.Web.styles.css?v=TLrBOglh1vA6dO_eArFTI1S9AsS0X9LUwmuvtVL6OBE - -
+2022-08-04 09:34:08.948 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 799.5207ms
+2022-08-04 09:34:08.956 +02:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\Projects\Grower\src\Grower.Web\wwwroot\css\site.css'
+2022-08-04 09:34:08.956 +02:00 [INF] Sending file. Request path: '/Grower.Web.styles.css'. Physical path: 'D:\Projects\Grower\src\Grower.Web\obj\Debug\net6.0\scopedcss\bundle\Grower.Web.styles.css'
+2022-08-04 09:34:08.956 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Grower.Web.styles.css?v=TLrBOglh1vA6dO_eArFTI1S9AsS0X9LUwmuvtVL6OBE - - - 200 1127 text/css 42.0656ms
+2022-08-04 09:34:08.956 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 200 194 text/css 42.2556ms
+2022-08-04 09:34:08.966 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/jquery/dist/jquery.min.js - -
+2022-08-04 09:34:08.969 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2022-08-04 09:34:09.023 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'D:\Projects\Grower\src\Grower.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2022-08-04 09:34:09.023 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'D:\Projects\Grower\src\Grower.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2022-08-04 09:34:09.033 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78474 application/javascript 63.4483ms
+2022-08-04 09:34:09.033 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162726 text/css 118.7915ms
+2022-08-04 09:34:09.036 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-08-04 09:34:09.040 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2022-08-04 09:34:09.042 +02:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'D:\Projects\Grower\src\Grower.Web\wwwroot\js\site.js'
+2022-08-04 09:34:09.042 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 2.4670ms
+2022-08-04 09:34:09.045 +02:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\Projects\Grower\src\Grower.Web\wwwroot\lib\jquery\dist\jquery.min.js'
+2022-08-04 09:34:09.047 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-08-04 09:34:09.050 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 14.6838ms
+2022-08-04 09:34:09.050 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/jquery/dist/jquery.min.js - - - 200 89478 application/javascript 84.9499ms
+2022-08-04 09:34:09.157 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 109.6012ms
+2022-08-04 09:34:09.282 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2022-08-04 09:34:09.288 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\Projects\Grower\src\Grower.Web\wwwroot\favicon.ico'
+2022-08-04 09:34:09.288 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 6.6539ms
+2022-08-04 09:50:40.654 +02:00 [INF] User profile is available. Using 'C:\Users\Swift LTD\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-04 09:50:41.981 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:50:42.130 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-08-04 09:50:42.209 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:50:42.627 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "ToDoItems" AS "t")
+2022-08-04 09:50:42.754 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-04 09:50:42.754 +02:00 [INF] Hosting environment: Development
+2022-08-04 09:50:42.754 +02:00 [INF] Content root path: D:\Projects\Grower\src\Grower.Web\
+2022-08-04 09:50:42.791 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2022-08-04 09:50:42.882 +02:00 [WRN] Failed to determine the https port for redirect.
+2022-08-04 09:50:42.939 +02:00 [INF] Executing endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-04 09:50:42.953 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Grower.Web.Controllers.HomeController (Grower.Web).
+2022-08-04 09:50:42.968 +02:00 [INF] Executing ViewResult, running view Index.
+2022-08-04 09:50:43.253 +02:00 [INF] Executed ViewResult - view Index executed in 289.1461ms.
+2022-08-04 09:50:43.261 +02:00 [INF] Executed action Grower.Web.Controllers.HomeController.Index (Grower.Web) in 307.1482ms
+2022-08-04 09:50:43.262 +02:00 [INF] Executed endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-04 09:50:43.344 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-08-04 09:50:43.345 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Grower.Web.styles.css?v=TLrBOglh1vA6dO_eArFTI1S9AsS0X9LUwmuvtVL6OBE - -
+2022-08-04 09:50:43.356 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 10.7892ms
+2022-08-04 09:50:43.366 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-08-04 09:50:43.376 +02:00 [INF] The file /Grower.Web.styles.css was not modified
+2022-08-04 09:50:43.380 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Grower.Web.styles.css?v=TLrBOglh1vA6dO_eArFTI1S9AsS0X9LUwmuvtVL6OBE - - - 304 - text/css 34.9628ms
+2022-08-04 09:50:43.387 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 600.0603ms
+2022-08-04 09:50:43.445 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 78.9268ms
+2022-08-04 09:50:44.374 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger - -
+2022-08-04 09:50:44.385 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger - - - 301 - - 10.7984ms
+2022-08-04 09:50:44.391 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2022-08-04 09:50:44.594 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 202.4753ms
+2022-08-04 09:50:44.595 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - -
+2022-08-04 09:50:44.596 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-bundle.js - -
+2022-08-04 09:50:44.606 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2022-08-04 09:50:44.607 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-standalone-preset.js - -
+2022-08-04 09:50:44.619 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2022-08-04 09:50:44.627 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 12.3021ms
+2022-08-04 09:50:44.641 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-08-04 09:50:44.641 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-08-04 09:50:44.645 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - - - 200 143943 text/css 49.7802ms
+2022-08-04 09:50:44.653 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-standalone-preset.js - - - 200 339486 application/javascript 46.5324ms
+2022-08-04 09:50:44.660 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-08-04 09:50:44.662 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.1746ms
+2022-08-04 09:50:44.696 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui-bundle.js - - - 200 1095087 application/javascript 99.8035ms
+2022-08-04 09:50:44.885 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2022-08-04 09:50:44.901 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-32x32.png - -
+2022-08-04 09:50:44.905 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-08-04 09:50:44.905 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-32x32.png - - - 200 628 image/png 4.1439ms
+2022-08-04 09:50:45.064 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 179.1771ms
+2022-08-04 09:50:51.432 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/info - -
+2022-08-04 09:50:51.432 +02:00 [INF] Executing endpoint 'Grower.Web.Api.MetaController.Info (Grower.Web)'
+2022-08-04 09:50:51.435 +02:00 [INF] Route matched with {action = "Info", controller = "Meta", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Info() on controller Grower.Web.Api.MetaController (Grower.Web).
+2022-08-04 09:50:51.474 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-08-04 09:50:51.475 +02:00 [INF] Executed action Grower.Web.Api.MetaController.Info (Grower.Web) in 40.6147ms
+2022-08-04 09:50:51.476 +02:00 [INF] Executed endpoint 'Grower.Web.Api.MetaController.Info (Grower.Web)'
+2022-08-04 09:50:51.476 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/info - - - 200 - text/plain;+charset=utf-8 44.1881ms
+2022-08-04 09:50:53.867 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/info - -
+2022-08-04 09:50:53.867 +02:00 [INF] Executing endpoint 'Grower.Web.Api.MetaController.Info (Grower.Web)'
+2022-08-04 09:50:53.868 +02:00 [INF] Route matched with {action = "Info", controller = "Meta", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Info() on controller Grower.Web.Api.MetaController (Grower.Web).
+2022-08-04 09:50:53.868 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2022-08-04 09:50:53.869 +02:00 [INF] Executed action Grower.Web.Api.MetaController.Info (Grower.Web) in 1.6239ms
+2022-08-04 09:50:53.869 +02:00 [INF] Executed endpoint 'Grower.Web.Api.MetaController.Info (Grower.Web)'
+2022-08-04 09:50:53.870 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/info - - - 200 - text/plain;+charset=utf-8 2.4164ms
+2022-08-04 09:51:04.382 +02:00 [INF] Request starting HTTP/1.1 PUT http://localhost:57678/Projects application/json-patch+json 33
+2022-08-04 09:51:04.382 +02:00 [INF] Executing endpoint 'Grower.Web.Endpoints.ProjectEndpoints.Update.HandleAsync (Grower.Web)'
+2022-08-04 09:51:04.401 +02:00 [INF] Route matched with {action = "Handle", controller = "Update", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Endpoints.ProjectEndpoints.UpdateProjectResponse]] HandleAsync(Grower.Web.Endpoints.ProjectEndpoints.UpdateProjectRequest, System.Threading.CancellationToken) on controller Grower.Web.Endpoints.ProjectEndpoints.Update (Grower.Web).
+2022-08-04 09:51:04.935 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:51:05.185 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Name", "p"."Priority"
+FROM "Projects" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2022-08-04 09:51:05.199 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-08-04 09:51:05.275 +02:00 [INF] Executed action Grower.Web.Endpoints.ProjectEndpoints.Update.HandleAsync (Grower.Web) in 873.5789ms
+2022-08-04 09:51:05.275 +02:00 [INF] Executed endpoint 'Grower.Web.Endpoints.ProjectEndpoints.Update.HandleAsync (Grower.Web)'
+2022-08-04 09:51:05.283 +02:00 [INF] Request finished HTTP/1.1 PUT http://localhost:57678/Projects application/json-patch+json 33 - 404 161 application/problem+json;+charset=utf-8 900.8357ms
+2022-08-04 09:51:14.524 +02:00 [INF] Request starting HTTP/1.1 PUT http://localhost:57678/Projects application/json-patch+json 30
+2022-08-04 09:51:14.525 +02:00 [INF] Executing endpoint 'Grower.Web.Endpoints.ProjectEndpoints.Update.HandleAsync (Grower.Web)'
+2022-08-04 09:51:14.525 +02:00 [INF] Route matched with {action = "Handle", controller = "Update", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Endpoints.ProjectEndpoints.UpdateProjectResponse]] HandleAsync(Grower.Web.Endpoints.ProjectEndpoints.UpdateProjectRequest, System.Threading.CancellationToken) on controller Grower.Web.Endpoints.ProjectEndpoints.Update (Grower.Web).
+2022-08-04 09:51:14.526 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:51:14.532 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Name", "p"."Priority"
+FROM "Projects" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2022-08-04 09:51:14.828 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 3), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Projects" SET "Name" = @p0, "Priority" = @p1
+WHERE "Id" = @p2;
+SELECT changes();
+2022-08-04 09:51:15.010 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Endpoints.ProjectEndpoints.UpdateProjectResponse'.
+2022-08-04 09:51:15.022 +02:00 [INF] Executed action Grower.Web.Endpoints.ProjectEndpoints.Update.HandleAsync (Grower.Web) in 497.6546ms
+2022-08-04 09:51:15.023 +02:00 [INF] Executed endpoint 'Grower.Web.Endpoints.ProjectEndpoints.Update.HandleAsync (Grower.Web)'
+2022-08-04 09:51:15.023 +02:00 [INF] Request finished HTTP/1.1 PUT http://localhost:57678/Projects application/json-patch+json 30 - 200 33 application/json;+charset=utf-8 498.4073ms
+2022-08-04 09:51:27.164 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Projects - -
+2022-08-04 09:51:27.164 +02:00 [INF] Executing endpoint 'Grower.Web.Endpoints.ProjectEndpoints.List.HandleAsync (Grower.Web)'
+2022-08-04 09:51:27.168 +02:00 [INF] Route matched with {action = "Handle", controller = "List", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Endpoints.ProjectEndpoints.ProjectListResponse]] HandleAsync(System.Threading.CancellationToken) on controller Grower.Web.Endpoints.ProjectEndpoints.List (Grower.Web).
+2022-08-04 09:51:27.173 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:51:27.183 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Name", "p"."Priority"
+FROM "Projects" AS "p"
+2022-08-04 09:51:27.184 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Endpoints.ProjectEndpoints.ProjectListResponse'.
+2022-08-04 09:51:27.193 +02:00 [INF] Executed action Grower.Web.Endpoints.ProjectEndpoints.List.HandleAsync (Grower.Web) in 24.8445ms
+2022-08-04 09:51:27.193 +02:00 [INF] Executed endpoint 'Grower.Web.Endpoints.ProjectEndpoints.List.HandleAsync (Grower.Web)'
+2022-08-04 09:51:27.193 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Projects - - - 200 36 application/json;+charset=utf-8 28.9952ms
+2022-08-04 09:51:31.351 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/Projects - -
+2022-08-04 09:51:31.351 +02:00 [INF] Executing endpoint 'Grower.Web.Endpoints.ProjectEndpoints.List.HandleAsync (Grower.Web)'
+2022-08-04 09:51:31.351 +02:00 [INF] Route matched with {action = "Handle", controller = "List", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Endpoints.ProjectEndpoints.ProjectListResponse]] HandleAsync(System.Threading.CancellationToken) on controller Grower.Web.Endpoints.ProjectEndpoints.List (Grower.Web).
+2022-08-04 09:51:31.352 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-04 09:51:31.352 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Name", "p"."Priority"
+FROM "Projects" AS "p"
+2022-08-04 09:51:31.352 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Endpoints.ProjectEndpoints.ProjectListResponse'.
+2022-08-04 09:51:31.353 +02:00 [INF] Executed action Grower.Web.Endpoints.ProjectEndpoints.List.HandleAsync (Grower.Web) in 1.9977ms
+2022-08-04 09:51:31.353 +02:00 [INF] Executed endpoint 'Grower.Web.Endpoints.ProjectEndpoints.List.HandleAsync (Grower.Web)'
+2022-08-04 09:51:31.353 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/Projects - - - 200 36 application/json;+charset=utf-8 2.5082ms
