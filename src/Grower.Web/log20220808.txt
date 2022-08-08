@@ -1,0 +1,556 @@
+2022-08-08 08:39:50.794 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.5' with options: None
+2022-08-08 08:39:51.587 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-08-08 08:39:51.596 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-08-08 08:39:51.606 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-08-08 08:39:51.623 +02:00 [INF] Applying migration '20220807135306_InitialMigrationCreateSchema2'.
+2022-08-08 08:39:51.666 +02:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "OrderItems";
+2022-08-08 08:50:01.526 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 08:50:03.854 +02:00 [INF] Executed DbCommand (300ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Grower];
+2022-08-08 08:50:03.986 +02:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Grower] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-08-08 08:50:04.009 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 08:50:04.120 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-08-08 08:50:04.121 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 08:50:04.143 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 08:50:04.148 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 08:50:04.163 +02:00 [INF] Applying migration '20220807135109_InitialMigrationCreateSchema'.
+2022-08-08 08:50:04.263 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220807135109_InitialMigrationCreateSchema', N'6.0.5');
+2022-08-08 08:50:04.268 +02:00 [INF] Applying migration '20220807135306_InitialMigrationCreateSchema2'.
+2022-08-08 08:50:04.275 +02:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE [OrderItems];
+2022-08-08 08:56:22.167 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 08:56:22.574 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 08:56:22.601 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 08:56:22.604 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 08:56:22.605 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 08:56:22.664 +02:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 08:56:22.708 +02:00 [INF] Applying migration '20220807135306_InitialMigrationCreateSchema2'.
+2022-08-08 08:56:22.751 +02:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE [OrderItems];
+2022-08-08 08:58:39.726 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 08:58:40.141 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 08:58:40.167 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 08:58:40.171 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 08:58:40.171 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 08:58:40.185 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 08:58:40.200 +02:00 [INF] Applying migration '20220807135306_InitialMigrationCreateSchema2'.
+2022-08-08 08:58:40.240 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220807135306_InitialMigrationCreateSchema2', N'6.0.5');
+2022-08-08 08:58:40.290 +02:00 [INF] Applying migration '20220807135713_InitialMigrationCreateSchema3'.
+2022-08-08 08:58:40.293 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220807135713_InitialMigrationCreateSchema3', N'6.0.5');
+2022-08-08 08:58:40.294 +02:00 [INF] Applying migration '20220807135858_InitialMigrationCreateSchema4'.
+2022-08-08 08:58:40.297 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220807135858_InitialMigrationCreateSchema4', N'6.0.5');
+2022-08-08 08:58:40.298 +02:00 [INF] Applying migration '20220807140356_InitialMigrationCreateSchema5'.
+2022-08-08 08:58:40.303 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220807140356_InitialMigrationCreateSchema5', N'6.0.5');
+2022-08-08 08:58:40.303 +02:00 [INF] Applying migration '20220807140507_InitialMigrationCreateSchema6'.
+2022-08-08 08:58:40.385 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ProductTypes] (
+    [Id] INTEGER NOT NULL,
+    [ProductTypeName] TEXT NOT NULL,
+    CONSTRAINT [PK_ProductTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 08:58:40.388 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleTypes] (
+    [Id] INTEGER NOT NULL,
+    [Name] TEXT NOT NULL,
+    CONSTRAINT [PK_RoleTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 08:58:40.392 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] INTEGER NOT NULL,
+    [Name] TEXT NOT NULL,
+    [BirthDate] TEXT NOT NULL,
+    [Phone] TEXT NOT NULL,
+    [Address] TEXT NOT NULL,
+    [Email] TEXT NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2022-08-08 08:58:40.397 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 08:58:40.401 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Growers] (
+    [Id] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Growers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Growers_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 08:58:40.405 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] INTEGER NOT NULL,
+    [RoleTypeId] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Roles_RoleTypes_RoleTypeId] FOREIGN KEY ([RoleTypeId]) REFERENCES [RoleTypes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Roles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 08:58:40.424 +02:00 [ERR] Failed executing DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserCredentials] (
+    [Id] INTEGER NOT NULL,
+    [PasswordHash] BLOB NOT NULL,
+    [PasswordSalt] BLOB NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_UserCredentials] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserCredentials_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:01:04.643 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:01:05.103 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:01:05.130 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:01:05.133 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:01:05.134 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:01:05.149 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 09:01:05.164 +02:00 [INF] Applying migration '20220807140507_InitialMigrationCreateSchema6'.
+2022-08-08 09:01:05.289 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ProductTypes] (
+    [Id] INTEGER NOT NULL,
+    [ProductTypeName] TEXT NOT NULL,
+    CONSTRAINT [PK_ProductTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 09:01:05.291 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleTypes] (
+    [Id] INTEGER NOT NULL,
+    [Name] TEXT NOT NULL,
+    CONSTRAINT [PK_RoleTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 09:01:05.294 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] INTEGER NOT NULL,
+    [Name] TEXT NOT NULL,
+    [BirthDate] TEXT NOT NULL,
+    [Phone] TEXT NOT NULL,
+    [Address] TEXT NOT NULL,
+    [Email] TEXT NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2022-08-08 09:01:05.296 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:01:05.298 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Growers] (
+    [Id] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Growers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Growers_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:01:05.301 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] INTEGER NOT NULL,
+    [RoleTypeId] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Roles_RoleTypes_RoleTypeId] FOREIGN KEY ([RoleTypeId]) REFERENCES [RoleTypes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Roles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:01:05.352 +02:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] INTEGER NOT NULL,
+    [CreatedOn] TEXT NOT NULL,
+    [DeliveryDate] TEXT NULL,
+    [TotalPrice] REAL NOT NULL,
+    [ClientID] INTEGER NOT NULL,
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Orders_Clients_ClientID] FOREIGN KEY ([ClientID]) REFERENCES [Clients] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:01:05.358 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] INTEGER NOT NULL,
+    [ProductName] TEXT NOT NULL,
+    [Description] TEXT NOT NULL,
+    [Quatity] INTEGER NOT NULL,
+    [Image] TEXT NOT NULL,
+    [Availability] INTEGER NOT NULL,
+    [GrowerId] INTEGER NOT NULL,
+    [ProductTypeId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Products_Growers_GrowerId] FOREIGN KEY ([GrowerId]) REFERENCES [Growers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_ProductTypes_ProductTypeId] FOREIGN KEY ([ProductTypeId]) REFERENCES [ProductTypes] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:01:05.399 +02:00 [ERR] Failed executing DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [OrderItems] (
+    [Id] INTEGER NOT NULL,
+    [Quantity] INTEGER NOT NULL,
+    [ProductId] INTEGER NOT NULL,
+    [OrderId] INTEGER NOT NULL,
+    CONSTRAINT [PK_OrderItems] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderItems_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_OrderItems_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:21:19.306 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:21:19.775 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:21:19.802 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:21:19.806 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:21:19.806 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:21:19.821 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 09:21:19.837 +02:00 [INF] Applying migration '20220807140507_InitialMigrationCreateSchema6'.
+2022-08-08 09:21:19.931 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ProductTypes] (
+    [Id] INTEGER NOT NULL,
+    [ProductTypeName] TEXT NOT NULL,
+    CONSTRAINT [PK_ProductTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 09:21:19.933 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleTypes] (
+    [Id] INTEGER NOT NULL,
+    [Name] TEXT NOT NULL,
+    CONSTRAINT [PK_RoleTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 09:21:19.935 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] INTEGER NOT NULL,
+    [Name] TEXT NOT NULL,
+    [BirthDate] TEXT NOT NULL,
+    [Phone] TEXT NOT NULL,
+    [Address] TEXT NOT NULL,
+    [Email] TEXT NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2022-08-08 09:21:19.984 +02:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:21:19.989 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Growers] (
+    [Id] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Growers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Growers_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:21:19.994 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] INTEGER NOT NULL,
+    [RoleTypeId] INTEGER NOT NULL,
+    [UserId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Roles_RoleTypes_RoleTypeId] FOREIGN KEY ([RoleTypeId]) REFERENCES [RoleTypes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Roles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:21:20.000 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] INTEGER NOT NULL,
+    [CreatedOn] TEXT NOT NULL,
+    [DeliveryDate] TEXT NULL,
+    [TotalPrice] REAL NOT NULL,
+    [ClientID] INTEGER NOT NULL,
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Orders_Clients_ClientID] FOREIGN KEY ([ClientID]) REFERENCES [Clients] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:21:20.007 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] INTEGER NOT NULL,
+    [ProductName] TEXT NOT NULL,
+    [Description] TEXT NOT NULL,
+    [Quatity] INTEGER NOT NULL,
+    [Image] TEXT NOT NULL,
+    [Availability] INTEGER NOT NULL,
+    [GrowerId] INTEGER NOT NULL,
+    [ProductTypeId] INTEGER NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Products_Growers_GrowerId] FOREIGN KEY ([GrowerId]) REFERENCES [Growers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_ProductTypes_ProductTypeId] FOREIGN KEY ([ProductTypeId]) REFERENCES [ProductTypes] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:21:20.013 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [OrderItems] (
+    [Id] INTEGER NOT NULL,
+    [Quantity] INTEGER NOT NULL,
+    [ProductId] INTEGER NOT NULL,
+    [OrderId] INTEGER NOT NULL,
+    CONSTRAINT [PK_OrderItems] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderItems_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]),
+    CONSTRAINT [FK_OrderItems_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id])
+);
+2022-08-08 09:21:20.022 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Clients_UserId] ON [Clients] ([UserId]);
+2022-08-08 09:21:20.024 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Growers_UserId] ON [Growers] ([UserId]);
+2022-08-08 09:21:20.026 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_OrderItems_OrderId] ON [OrderItems] ([OrderId]);
+2022-08-08 09:21:20.105 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_OrderItems_ProductId] ON [OrderItems] ([ProductId]);
+2022-08-08 09:21:20.109 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Orders_ClientID] ON [Orders] ([ClientID]);
+2022-08-08 09:21:20.112 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Products_GrowerId] ON [Products] ([GrowerId]);
+2022-08-08 09:21:20.115 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Products_ProductTypeId] ON [Products] ([ProductTypeId]);
+2022-08-08 09:21:20.118 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Roles_RoleTypeId] ON [Roles] ([RoleTypeId]);
+2022-08-08 09:21:20.120 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Roles_UserId] ON [Roles] ([UserId]);
+2022-08-08 09:21:20.140 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220807140507_InitialMigrationCreateSchema6', N'6.0.5');
+2022-08-08 09:27:44.003 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:29:49.804 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:30:43.544 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:31:34.760 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:41:29.326 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:42:14.723 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:42:15.110 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:42:15.207 +02:00 [INF] Executed DbCommand (83ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:42:15.219 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:42:15.221 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:42:15.253 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 09:42:15.274 +02:00 [INF] Applying migration '20220808074129_UpdateIntoUser'.
+2022-08-08 09:44:02.890 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:45:37.765 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:45:38.282 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:45:38.309 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:45:38.318 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 09:45:57.901 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:45:58.568 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:45:58.595 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:45:58.605 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 09:48:55.887 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:48:56.492 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:48:56.554 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:48:56.573 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 09:51:08.617 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:51:42.207 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:51:51.739 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:52:17.634 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:53:01.556 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-08 09:53:02.268 +02:00 [INF] Executed DbCommand (283ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Grower];
+2022-08-08 09:53:02.365 +02:00 [INF] Executed DbCommand (93ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Grower] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2022-08-08 09:53:02.387 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:53:02.585 +02:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2022-08-08 09:53:02.586 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-08 09:53:02.613 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-08-08 09:53:02.619 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-08-08 09:53:02.637 +02:00 [INF] Applying migration '20220808075217_CreateSchema'.
+2022-08-08 09:53:02.738 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ProductTypes] (
+    [Id] int NOT NULL IDENTITY,
+    [ProductTypeName] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_ProductTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 09:53:02.741 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Project] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(100) NOT NULL,
+    [Priority] int NOT NULL,
+    CONSTRAINT [PK_Project] PRIMARY KEY ([Id])
+);
+2022-08-08 09:53:02.743 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleTypes] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_RoleTypes] PRIMARY KEY ([Id])
+);
+2022-08-08 09:53:02.746 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [BirthDate] datetime2 NULL,
+    [Phone] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2022-08-08 09:53:02.748 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ToDoItem] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [IsDone] bit NOT NULL,
+    [ProjectId] int NULL,
+    CONSTRAINT [PK_ToDoItem] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_ToDoItem_Project_ProjectId] FOREIGN KEY ([ProjectId]) REFERENCES [Project] ([Id])
+);
+2022-08-08 09:53:02.750 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:53:02.751 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Growers] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_Growers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Growers_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:53:02.753 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleTypeId] int NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Roles_RoleTypes_RoleTypeId] FOREIGN KEY ([RoleTypeId]) REFERENCES [RoleTypes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Roles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:53:02.755 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserCredentials] (
+    [Id] int NOT NULL IDENTITY,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PasswordSalt] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_UserCredentials] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserCredentials_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:53:02.758 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] int NOT NULL IDENTITY,
+    [CreatedOn] datetime2 NOT NULL,
+    [DeliveryDate] datetime2 NULL,
+    [TotalPrice] float NOT NULL,
+    [ClientID] int NOT NULL,
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Orders_Clients_ClientID] FOREIGN KEY ([ClientID]) REFERENCES [Clients] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:53:02.761 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] int NOT NULL IDENTITY,
+    [ProductName] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Quatity] int NOT NULL,
+    [Image] nvarchar(max) NOT NULL,
+    [Availability] bit NOT NULL,
+    [GrowerId] int NOT NULL,
+    [ProductTypeId] int NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Products_Growers_GrowerId] FOREIGN KEY ([GrowerId]) REFERENCES [Growers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_ProductTypes_ProductTypeId] FOREIGN KEY ([ProductTypeId]) REFERENCES [ProductTypes] ([Id]) ON DELETE CASCADE
+);
+2022-08-08 09:53:03.015 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [OrderItems] (
+    [Id] int NOT NULL IDENTITY,
+    [Quantity] int NOT NULL,
+    [ProductId] int NOT NULL,
+    [OrderId] int NOT NULL,
+    CONSTRAINT [PK_OrderItems] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_OrderItems_Orders_OrderId] FOREIGN KEY ([OrderId]) REFERENCES [Orders] ([Id]),
+    CONSTRAINT [FK_OrderItems_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id])
+);
+2022-08-08 09:53:03.016 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Clients_UserId] ON [Clients] ([UserId]);
+2022-08-08 09:53:03.017 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Growers_UserId] ON [Growers] ([UserId]);
+2022-08-08 09:53:03.018 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_OrderItems_OrderId] ON [OrderItems] ([OrderId]);
+2022-08-08 09:53:03.018 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_OrderItems_ProductId] ON [OrderItems] ([ProductId]);
+2022-08-08 09:53:03.019 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Orders_ClientID] ON [Orders] ([ClientID]);
+2022-08-08 09:53:03.020 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Products_GrowerId] ON [Products] ([GrowerId]);
+2022-08-08 09:53:03.021 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Products_ProductTypeId] ON [Products] ([ProductTypeId]);
+2022-08-08 09:53:03.021 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Roles_RoleTypeId] ON [Roles] ([RoleTypeId]);
+2022-08-08 09:53:03.023 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Roles_UserId] ON [Roles] ([UserId]);
+2022-08-08 09:53:03.026 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ToDoItem_ProjectId] ON [ToDoItem] ([ProjectId]);
+2022-08-08 09:53:03.028 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_UserCredentials_UserId] ON [UserCredentials] ([UserId]);
+2022-08-08 09:53:03.030 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220808075217_CreateSchema', N'6.0.5');
