@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using Grower.Core.Entities;
 using Grower.Core.ProjectAggregate;
 using Grower.SharedKernel;
 using Grower.SharedKernel.Interfaces;
@@ -17,11 +18,26 @@ public class AppDbContext : DbContext
     _dispatcher = dispatcher;
   }
 
-  public DbSet<ToDoItem> ToDoItems => Set<ToDoItem>();
-  public DbSet<Project> Projects => Set<Project>();
+   
+  //public DbSet<ToDoItem> ToDoItems => Set<ToDoItem>();
+  //public DbSet<Project> Projects => Set<Project>();
+  public DbSet<ProductType> ProductTypes => Set<ProductType>();
+  public DbSet<Product> Products => Set<Product>();
+  public DbSet<Client> Clients => Set<Client>();
+  public DbSet<Grower.Core.Entities.Grower> Growers => Set<Grower.Core.Entities.Grower>();
+  public DbSet<Order> Orders => Set<Order>();
+  public DbSet<OrderItem> OrderItems => Set<OrderItem>();
+  public DbSet<Role> Roles => Set<Role>();
+  public DbSet<RoleType> RoleTypes => Set<RoleType>();
+  public DbSet<User> Users => Set<User>();
+  public DbSet<UserCredentials> UserCredentials => Set<UserCredentials>();
+
+
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
+    
+
     base.OnModelCreating(modelBuilder);
     modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
   }

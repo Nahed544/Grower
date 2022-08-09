@@ -5,6 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Grower.Core.Entities;
-internal class User
+public class User
 {
+  public int Id { get; set; }
+  public string Name { get; set; }
+  public DateTime? BirthDate { get; set; }
+  public string Phone { get; set; }
+  public string Address { get; set; }
+  public string Email { get; set; }
+
+  public UserCredentials UserCredentials { get; set; }
 }

@@ -5,6 +5,7 @@ using Grower.Core;
 using Grower.Infrastructure;
 using Grower.Infrastructure.Data;
 using Grower.Web;
+using Grower.Web.Extensions;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
@@ -13,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
+ 
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
@@ -20,12 +22,15 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
   options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 
-string connectionString = builder.Configuration.GetConnectionString("SqliteConnection");  //Configuration.GetConnectionString("DefaultConnection");
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");  //Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext(connectionString);
+builder.Services.AddDbContext(connectionString); 
 
 builder.Services.AddControllersWithViews().AddNewtonsoftJson();
 builder.Services.AddRazorPages();
+
+builder.Services.AddApplicationService(builder.Configuration);
+
 
 builder.Services.AddSwaggerGen(c =>
 {
