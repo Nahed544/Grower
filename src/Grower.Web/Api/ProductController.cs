@@ -20,9 +20,9 @@ public class ProductController :BaseApiController
   }
 
   [HttpGet]
-  public async Task  <IActionResult> Get()
+  public async Task<IActionResult> Get(int growerId)
   {
-    var products =  await _mediator.Send(new GetAllProductQuery());
+    var products =  await _mediator.Send(new GetProductsByGrowerId(growerId));
     return Ok(products);
   }
   [HttpPost]

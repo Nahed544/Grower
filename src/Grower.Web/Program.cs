@@ -11,6 +11,17 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+  options.AddPolicy(name: MyAllowSpecificOrigins,
+                    policy =>
+                    {
+                      policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+                    });
+});
+
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
@@ -68,6 +79,7 @@ else
   app.UseExceptionHandler("/Home/Error");
   app.UseHsts();
 }
+app.UseCors(MyAllowSpecificOrigins);
 app.UseRouting();
 
 app.UseHttpsRedirection();
