@@ -2,7 +2,7 @@
 
 namespace Grower.Web.Mappers;
 
-public class ProductMapper
+public class GrowerMapper
 {  
   private static readonly Lazy<IMapper> Lazy = new Lazy<IMapper>(() =>
   {
@@ -10,6 +10,7 @@ public class ProductMapper
     {
       cfg.ShouldMapProperty = p => p.GetMethod.IsPublic || p.GetMethod.IsAssembly;
       cfg.AddProfile<ProductMappingProfile>();
+      cfg.AddProfile<ProductTypeMappingProfile>();
     });
     var mapper = config.CreateMapper();
     return mapper;

@@ -12,6 +12,8 @@ import { ProductsListComponent } from './components/products/products-list/produ
 import { ProductItemComponent } from './components/products/products-list/product-item/product-item.component'; 
 import { AppRoutingModule } from './app-routing.module';
 import { ProductEditComponent } from './components/products/products-list/product-edit/product-edit.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,13 @@ import { ProductEditComponent } from './components/products/products-list/produc
     HttpClientModule,
     FormsModule, 
     AppRoutingModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }) 
     
   ],
   providers: [],

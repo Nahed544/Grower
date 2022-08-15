@@ -30,7 +30,8 @@ public static class AppServiceExtensions
 
     Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
     Services.AddTransient<IProductRepository, ProductRepository>();
- 
+    Services.AddTransient<IProductTypeRepository, ProductTypeRepository>();
+
 
     return Services;
   }

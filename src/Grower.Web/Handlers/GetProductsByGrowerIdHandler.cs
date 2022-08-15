@@ -21,7 +21,7 @@ public class GetProductsByGrowerIdHandler : IRequestHandler<GetProductsByGrowerI
     var productsResponse = new List<ProductResponse>();
     var products = await _productRepository.GetAllProductByGrowerId(request.GrowerId);
     productsResponse =
-      ProductMapper.Mapper.Map<List<ProductResponse>>(products)  ;
+      GrowerMapper.Mapper.Map<List<ProductResponse>>(products)  ;
     return productsResponse;
   }
 

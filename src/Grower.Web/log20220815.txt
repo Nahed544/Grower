@@ -1,0 +1,79 @@
+2022-08-15 08:52:09.294 +02:00 [INF] User profile is available. Using 'C:\Users\Swift LTD\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-15 08:52:11.465 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-15 08:52:13.476 +02:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-15 08:52:13.575 +02:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-08-15 08:52:13.877 +02:00 [INF] Now listening on: http://localhost:57679
+2022-08-15 08:52:13.881 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-15 08:52:13.882 +02:00 [INF] Hosting environment: Development
+2022-08-15 08:52:13.883 +02:00 [INF] Content root path: D:\Tests\Grower\src\Grower.Web\
+2022-08-15 08:52:24.483 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/ - -
+2022-08-15 08:52:24.544 +02:00 [WRN] Failed to determine the https port for redirect.
+2022-08-15 08:52:24.569 +02:00 [INF] Executing endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-15 08:52:24.579 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Grower.Web.Controllers.HomeController (Grower.Web).
+2022-08-15 08:52:24.589 +02:00 [INF] Executing ViewResult, running view Index.
+2022-08-15 08:52:24.889 +02:00 [INF] Executed ViewResult - view Index executed in 299.8605ms.
+2022-08-15 08:52:24.896 +02:00 [INF] Executed action Grower.Web.Controllers.HomeController.Index (Grower.Web) in 315.0383ms
+2022-08-15 08:52:24.897 +02:00 [INF] Executed endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-15 08:52:25.000 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2022-08-15 08:52:25.005 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/lib/jquery/dist/jquery.min.js - -
+2022-08-15 08:52:25.001 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/Grower.Web.styles.css?v=TLrBOglh1vA6dO_eArFTI1S9AsS0X9LUwmuvtVL6OBE - -
+2022-08-15 08:52:25.005 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - -
+2022-08-15 08:52:25.015 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2022-08-15 08:52:25.022 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/ - - - 200 - text/html;+charset=utf-8 540.6905ms
+2022-08-15 08:52:25.026 +02:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2022-08-15 08:52:25.026 +02:00 [INF] The file /css/site.css was not modified
+2022-08-15 08:52:25.026 +02:00 [INF] The file /Grower.Web.styles.css was not modified
+2022-08-15 08:52:25.028 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/lib/jquery/dist/jquery.min.js - - - 304 - application/javascript 23.0969ms
+2022-08-15 08:52:25.026 +02:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2022-08-15 08:52:25.033 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 304 - text/css 32.7229ms
+2022-08-15 08:52:25.037 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 32.0690ms
+2022-08-15 08:52:25.037 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/Grower.Web.styles.css?v=TLrBOglh1vA6dO_eArFTI1S9AsS0X9LUwmuvtVL6OBE - - - 304 - text/css 36.3586ms
+2022-08-15 08:52:25.043 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - application/javascript 27.5459ms
+2022-08-15 08:52:25.064 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2022-08-15 08:52:25.064 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - -
+2022-08-15 08:52:25.064 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/lib/bootstrap/dist/css/bootstrap.min.css - -
+2022-08-15 08:52:25.066 +02:00 [INF] The file /js/site.js was not modified
+2022-08-15 08:52:25.071 +02:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2022-08-15 08:52:25.072 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 304 - application/javascript 7.6611ms
+2022-08-15 08:52:25.073 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 8.8437ms
+2022-08-15 08:52:25.176 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 111.7107ms
+2022-08-15 08:52:27.945 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - -
+2022-08-15 08:52:28.030 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - - - 200 - text/html;charset=utf-8 84.4128ms
+2022-08-15 08:52:28.031 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - -
+2022-08-15 08:52:28.031 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - -
+2022-08-15 08:52:28.034 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 2.9157ms
+2022-08-15 08:52:28.038 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 6.9940ms
+2022-08-15 08:52:28.607 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - -
+2022-08-15 08:52:28.608 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - -
+2022-08-15 08:52:28.609 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 1.9218ms
+2022-08-15 08:52:28.624 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.6118ms
+2022-08-15 08:52:28.844 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - -
+2022-08-15 08:52:28.991 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 146.6283ms
+2022-08-15 09:00:29.226 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/ - -
+2022-08-15 09:00:29.233 +02:00 [INF] Executing endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-15 09:00:29.235 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Grower.Web.Controllers.HomeController (Grower.Web).
+2022-08-15 09:00:29.239 +02:00 [INF] Executing ViewResult, running view Index.
+2022-08-15 09:00:29.246 +02:00 [INF] Executed ViewResult - view Index executed in 7.7241ms.
+2022-08-15 09:00:29.247 +02:00 [INF] Executed action Grower.Web.Controllers.HomeController.Index (Grower.Web) in 9.8743ms
+2022-08-15 09:00:29.248 +02:00 [INF] Executed endpoint 'Grower.Web.Controllers.HomeController.Index (Grower.Web)'
+2022-08-15 09:00:29.258 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/ - - - 200 - text/html;+charset=utf-8 37.0366ms
+2022-08-15 09:00:29.285 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - -
+2022-08-15 09:00:29.286 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - -
+2022-08-15 09:00:29.288 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 3.3998ms
+2022-08-15 09:00:29.346 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.5907ms

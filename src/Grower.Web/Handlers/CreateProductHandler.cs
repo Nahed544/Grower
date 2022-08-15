@@ -16,13 +16,13 @@ public class CreateProductHandler : IRequestHandler<CreateProductCommand, Produc
   }
   public async Task<ProductResponse> Handle(CreateProductCommand request, CancellationToken cancellationToken)
   {
-    var productEntity = ProductMapper.Mapper.Map<Product>(request);
+    var productEntity = GrowerMapper.Mapper.Map<Product>(request);
     if (productEntity is null)
     {
       throw new ApplicationException("Issue with mapper");
     }
     var newProduct = await _productRepository.AddAsync(productEntity);
-    var productResponse = ProductMapper.Mapper.Map<ProductResponse>(newProduct);
+    var productResponse = GrowerMapper.Mapper.Map<ProductResponse>(newProduct);
     return productResponse;
   }
 }

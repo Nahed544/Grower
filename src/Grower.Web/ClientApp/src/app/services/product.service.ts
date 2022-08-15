@@ -12,7 +12,7 @@ export class ProductService {
   baseUrl = environment.baseURL;
   productsChanged = new Subject<Product[]>();
   products: Product[] = [];
-  growerId: number = 1;
+  growerId: number = 1 ;
 
   constructor(private httpClient: HttpClient) {
 
@@ -25,8 +25,7 @@ export class ProductService {
     if(this.products.length <= 0)
     {    
       this.fetchProducts();
-    }
-    console.log("loaded")
+    } 
     return this.products ;
   }
 

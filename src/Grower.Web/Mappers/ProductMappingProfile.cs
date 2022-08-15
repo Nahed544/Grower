@@ -19,8 +19,6 @@ public class ProductMappingProfile : Profile
   ;
 
     CreateMap< Product, CreateProductCommand >().ReverseMap();
-
-    ///
-    //CreateMap< ProductResponse, GetProductsByGrowerId>().ReverseMap();
+     
   }
 }
