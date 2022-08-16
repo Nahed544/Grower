@@ -6,26 +6,34 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductResolverService } from './resolvers/product-list.resolver';
 import { ProductTypeResolverService } from './resolvers/ProductType.resolver';
 
-
-
 const appRoutes: Routes = [
-  { path: '', pathMatch: 'full' ,redirectTo:'/products'}
-  ,
-  { path: '' ,
-    children:
-    [
-      {path:'products', component: ProductsComponent  ,resolve:[ProductResolverService]} ,
-      {path: 'products/new', component: ProductEditComponent ,resolve:[ProductTypeResolverService]} ,  
-      {path: 'products/:id/edit', component: ProductEditComponent,resolve:[ProductResolverService 
-        ] }
-    
-    ]
-  }
-  
+  { path: '', pathMatch: 'full', redirectTo: '/products' },
+  {
+    path: '',
+    children: [
+      {
+        path: 'products',
+        component: ProductsComponent,
+        resolve: [ProductResolverService],
+      },
+      {
+        path: 'products/new',
+        component: ProductEditComponent,
+        resolve: [ProductTypeResolverService],
+      },
+      {
+        path: 'products/:id/edit',
+        component: ProductEditComponent,
+        resolve: [ProductResolverService, ProductTypeResolverService],
+      },
+    ],
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
