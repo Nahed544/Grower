@@ -48,8 +48,7 @@ export class ProductEditComponent implements OnInit {
         availability: [product.availability, Validators.required],
         quatity: [product.quatity, Validators.required],
         description: [product.description, Validators.required],
-      });
-      //this.editMode =false
+      }); 
     } else {
       this.productForm = this.fb.group({
         productName: ['', Validators.required],
@@ -86,4 +85,5 @@ export class ProductEditComponent implements OnInit {
       (error) => console.log(error)
     );
   }
+  
 }

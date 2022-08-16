@@ -11,5 +11,6 @@ public class CreateProductCommand : IRequest<ProductResponse>
   public string Image { get; set; }
   public bool Availability { get; set; }
   public int GrowerId { get; set; } 
+  public double Price { get; set; }
   public int ProductTypeId { get; set; }
 }

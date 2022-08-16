@@ -43,10 +43,9 @@ export class ProductService {
 
   addProduct(product: Product) {
     product.growerId = 1;
-
+    console.log(product)
     return this.httpClient.post(this.baseUrl + 'Product', product).pipe(
       tap(() => {
-        console.log('Push');
         this.products.push(product);
         this.productsChanged.next(this.products.slice());
       })

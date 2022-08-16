@@ -3514,3 +3514,1188 @@ FROM [ProductTypes] AS [p]
 2022-08-16 11:49:33.241 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 23.0588ms
 2022-08-16 11:49:33.243 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
 2022-08-16 11:49:33.252 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 52.0108ms
+2022-08-16 11:52:00.183 +02:00 [INF] User profile is available. Using 'C:\Users\Swift LTD\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 11:52:03.003 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:52:03.859 +02:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-16 11:52:03.981 +02:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-08-16 11:52:04.181 +02:00 [INF] Now listening on: http://localhost:57679
+2022-08-16 11:52:04.186 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 11:52:04.186 +02:00 [INF] Hosting environment: Development
+2022-08-16 11:52:04.187 +02:00 [INF] Content root path: D:\Tests\Grower\src\Grower.Web\
+2022-08-16 11:52:56.883 +02:00 [INF] User profile is available. Using 'C:\Users\Swift LTD\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 11:52:59.255 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:52:59.976 +02:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-16 11:53:00.067 +02:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-08-16 11:53:00.245 +02:00 [INF] Now listening on: http://localhost:57679
+2022-08-16 11:53:00.251 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 11:53:00.252 +02:00 [INF] Hosting environment: Development
+2022-08-16 11:53:00.253 +02:00 [INF] Content root path: D:\Tests\Grower\src\Grower.Web\
+2022-08-16 11:55:05.493 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 11:55:05.528 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:55:05.584 +02:00 [WRN] Failed to determine the https port for redirect.
+2022-08-16 11:55:05.628 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:55:05.679 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 11:55:05.780 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:55:06.665 +02:00 [INF] Executed DbCommand (59ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 11:55:06.872 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:55:07.093 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 1400.4046ms
+2022-08-16 11:55:07.097 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:55:07.152 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2237 application/json;+charset=utf-8 1665.7475ms
+2022-08-16 11:55:08.871 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 11:55:08.873 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:55:08.878 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:55:08.883 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 11:55:08.971 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:55:09.073 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 11:55:09.144 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:55:09.151 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 263.5094ms
+2022-08-16 11:55:09.156 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:55:09.174 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 303.0601ms
+2022-08-16 11:55:29.963 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product - -
+2022-08-16 11:55:29.965 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:55:29.966 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product - - - 204 - - 3.1086ms
+2022-08-16 11:55:29.968 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json 305
+2022-08-16 11:55:29.970 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:55:29.971 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 11:55:29.978 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 11:55:57.240 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:55:57.550 +02:00 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Availability], [Description], [GrowerId], [Image], [Price], [ProductName], [ProductTypeId], [Quatity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 11:56:31.465 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Responses.ProductResponse'.
+2022-08-16 11:56:31.474 +02:00 [INF] Executed action Grower.Web.Api.ProductController.CreateProduct (Grower.Web) in 61492.333ms
+2022-08-16 11:56:31.476 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 11:56:31.477 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/api/Product application/json 305 - 200 360 application/json;+charset=utf-8 61508.9787ms
+2022-08-16 11:56:45.307 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 11:56:45.310 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:56:45.312 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:56:45.314 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 11:56:45.318 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:56:45.332 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 11:56:45.346 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:56:45.349 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 32.8354ms
+2022-08-16 11:56:45.351 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:56:45.353 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2605 application/json;+charset=utf-8 45.4647ms
+2022-08-16 11:56:47.500 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 11:56:47.501 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:56:47.503 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:56:47.504 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 11:56:47.507 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:56:47.510 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 11:56:47.513 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:56:47.514 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 7.7606ms
+2022-08-16 11:56:47.515 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:56:47.516 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 15.7827ms
+2022-08-16 11:57:15.061 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 11:57:15.080 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 11:57:15.095 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:57:15.096 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:57:15.098 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:57:15.105 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:57:15.108 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 11:57:15.111 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 11:57:15.114 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:57:19.074 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:57:19.075 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 11:57:19.081 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:57:19.082 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 11:57:19.082 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 3969.31ms
+2022-08-16 11:57:19.093 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:57:28.329 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:57:28.330 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 13269.1963ms
+2022-08-16 11:57:28.333 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 13217.1691ms
+2022-08-16 11:57:28.337 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:57:28.338 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2605 application/json;+charset=utf-8 13260.1768ms
+2022-08-16 11:57:56.580 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 11:57:56.600 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 11:57:56.605 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:57:56.612 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:57:56.613 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:57:56.614 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:57:56.615 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 11:57:56.616 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 11:58:10.951 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:58:10.953 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:58:10.958 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 11:58:10.958 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 11:58:10.960 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:58:10.963 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:58:10.967 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 15.2095ms
+2022-08-16 11:58:10.970 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 14346.3672ms
+2022-08-16 11:58:10.972 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:58:10.973 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:58:10.976 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 14376.1495ms
+2022-08-16 11:58:10.982 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2605 application/json;+charset=utf-8 14402.4602ms
+2022-08-16 11:58:42.382 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 11:58:42.404 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 11:58:42.409 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:58:42.416 +02:00 [INF] CORS policy execution successful.
+2022-08-16 11:58:42.418 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:58:42.419 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:58:42.425 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 11:58:42.426 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 11:58:44.526 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:58:44.529 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:58:44.535 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 11:58:44.536 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 11:58:44.541 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:58:44.546 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:58:44.547 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 19.0644ms
+2022-08-16 11:58:44.550 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 2117.3182ms
+2022-08-16 11:58:44.551 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 11:58:44.554 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:58:44.562 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 2157.5469ms
+2022-08-16 11:58:44.564 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2605 application/json;+charset=utf-8 2185.0210ms
+2022-08-16 11:59:12.531 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - -
+2022-08-16 11:59:12.675 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - - - 200 - text/html;charset=utf-8 144.0388ms
+2022-08-16 11:59:12.696 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 11:59:12.712 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 15.4686ms
+2022-08-16 11:59:12.974 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - -
+2022-08-16 11:59:13.382 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 407.7120ms
+2022-08-16 11:59:26.188 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 11:59:26.190 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:59:26.192 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 11:59:27.568 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 11:59:27.572 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 11:59:27.575 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 11:59:27.578 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 1381.0067ms
+2022-08-16 11:59:27.579 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 11:59:27.581 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2605 application/json;+charset=utf-8 1392.1331ms
+2022-08-16 12:00:44.094 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - -
+2022-08-16 12:00:44.111 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - - - 200 - text/html;charset=utf-8 17.3505ms
+2022-08-16 12:00:44.143 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - -
+2022-08-16 12:00:44.151 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 8.0174ms
+2022-08-16 12:00:44.559 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - -
+2022-08-16 12:00:44.577 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.5926ms
+2022-08-16 12:01:22.353 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product - -
+2022-08-16 12:01:22.355 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:01:22.356 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product - - - 204 - - 5.8158ms
+2022-08-16 12:01:22.358 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json 252
+2022-08-16 12:01:22.360 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:01:22.364 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:01:22.368 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:01:22.383 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:01:22.394 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Availability], [Description], [GrowerId], [Image], [Price], [ProductName], [ProductTypeId], [Quatity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 12:01:22.403 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Responses.ProductResponse'.
+2022-08-16 12:01:22.404 +02:00 [INF] Executed action Grower.Web.Api.ProductController.CreateProduct (Grower.Web) in 33.5091ms
+2022-08-16 12:01:22.405 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:01:22.406 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/api/Product application/json 252 - 200 305 application/json;+charset=utf-8 48.1694ms
+2022-08-16 12:01:28.892 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:01:28.894 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:01:28.898 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:01:28.903 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:01:30.475 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:01:30.488 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:01:30.497 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:01:30.498 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 1592.5806ms
+2022-08-16 12:01:30.503 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:01:30.504 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2914 application/json;+charset=utf-8 1611.9148ms
+2022-08-16 12:01:35.531 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:01:35.532 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:01:35.534 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:01:35.537 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:01:35.539 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:01:35.542 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:01:35.545 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:01:35.546 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 6.9215ms
+2022-08-16 12:01:35.552 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:01:35.554 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 22.9088ms
+2022-08-16 12:01:56.156 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:01:56.167 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:01:56.168 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:02:00.738 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:02:00.743 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:02:00.746 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:02:00.747 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 4573.9821ms
+2022-08-16 12:02:00.748 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:02:00.749 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 2914 application/json;+charset=utf-8 4596.2832ms
+2022-08-16 12:02:36.678 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json-patch+json 175
+2022-08-16 12:02:36.680 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:02:36.681 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:02:36.683 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:02:36.693 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:02:36.702 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Availability], [Description], [GrowerId], [Image], [Price], [ProductName], [ProductTypeId], [Quatity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 12:02:36.712 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Responses.ProductResponse'.
+2022-08-16 12:02:36.714 +02:00 [INF] Executed action Grower.Web.Api.ProductController.CreateProduct (Grower.Web) in 25.7607ms
+2022-08-16 12:02:36.719 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:02:36.720 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/api/Product application/json-patch+json 175 - 200 199 application/json;+charset=utf-8 41.7690ms
+2022-08-16 12:02:37.775 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json-patch+json 175
+2022-08-16 12:02:37.776 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:02:37.777 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:02:37.792 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:02:37.804 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:02:37.815 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Availability], [Description], [GrowerId], [Image], [Price], [ProductName], [ProductTypeId], [Quatity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 12:02:37.829 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Responses.ProductResponse'.
+2022-08-16 12:02:37.833 +02:00 [INF] Executed action Grower.Web.Api.ProductController.CreateProduct (Grower.Web) in 30.2118ms
+2022-08-16 12:02:37.834 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:02:37.837 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/api/Product application/json-patch+json 175 - 200 199 application/json;+charset=utf-8 62.3629ms
+2022-08-16 12:03:29.301 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:03:29.305 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:03:29.315 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:03:29.316 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:03:29.317 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:03:29.318 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:03:29.319 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:03:29.320 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:03:41.165 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:03:41.165 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:03:41.168 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:03:41.170 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:03:41.173 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:03:41.176 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:03:41.189 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:03:41.190 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:03:41.196 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 11873.8763ms
+2022-08-16 12:03:41.197 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:03:41.199 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:03:41.200 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:03:41.202 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:03:41.205 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:03:41.205 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 3328 application/json;+charset=utf-8 11903.7992ms
+2022-08-16 12:03:41.210 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 42.4357ms
+2022-08-16 12:03:41.216 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:03:41.218 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:03:41.219 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 20.3386ms
+2022-08-16 12:03:41.220 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 11915.6928ms
+2022-08-16 12:03:41.221 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:03:41.224 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 3328 application/json;+charset=utf-8 58.3856ms
+2022-08-16 12:03:44.785 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:03:44.786 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:03:44.787 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:03:44.788 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:03:44.791 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:03:44.794 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:03:44.803 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:03:44.805 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 15.4828ms
+2022-08-16 12:03:44.807 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:03:44.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 24.7535ms
+2022-08-16 12:04:01.343 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product - -
+2022-08-16 12:04:01.345 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:04:01.348 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product - - - 204 - - 3.9959ms
+2022-08-16 12:04:01.352 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json 250
+2022-08-16 12:04:01.353 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:04:01.353 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:04:01.357 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:04:01.366 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:04:01.373 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Availability], [Description], [GrowerId], [Image], [Price], [ProductName], [ProductTypeId], [Quatity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 12:04:01.382 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Responses.ProductResponse'.
+2022-08-16 12:04:01.383 +02:00 [INF] Executed action Grower.Web.Api.ProductController.CreateProduct (Grower.Web) in 17.6772ms
+2022-08-16 12:04:01.385 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:04:01.386 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/api/Product application/json 250 - 200 305 application/json;+charset=utf-8 33.9203ms
+2022-08-16 12:04:34.520 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:04:34.528 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:04:34.530 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:04:34.531 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:04:34.536 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:04:34.545 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:04:34.554 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:04:34.556 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 21.4588ms
+2022-08-16 12:04:34.558 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:04:34.564 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 3641 application/json;+charset=utf-8 44.5337ms
+2022-08-16 12:05:37.086 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:05:37.094 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:05:37.096 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:05:37.098 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:05:37.103 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:05:37.111 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:05:37.117 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:05:37.119 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 16.629ms
+2022-08-16 12:05:37.120 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:05:37.121 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 3641 application/json;+charset=utf-8 35.3468ms
+2022-08-16 12:05:45.222 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:05:45.223 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:05:45.226 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:05:45.227 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:05:45.232 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:05:45.238 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:05:45.243 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:05:45.247 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 15.5285ms
+2022-08-16 12:05:45.250 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:05:45.257 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 3641 application/json;+charset=utf-8 34.4325ms
+2022-08-16 12:05:54.063 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:05:54.064 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:05:54.067 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:05:54.069 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:05:54.071 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:05:54.074 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:05:54.076 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:05:54.078 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 7.2195ms
+2022-08-16 12:05:54.079 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:05:54.080 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 17.6580ms
+2022-08-16 12:05:56.797 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/17 - -
+2022-08-16 12:05:56.798 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:05:56.800 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/17 - - - 204 - - 3.0936ms
+2022-08-16 12:05:56.801 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/17 - -
+2022-08-16 12:05:56.802 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:05:56.803 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:05:56.807 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:05:56.835 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:05:56.855 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:05:56.897 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:05:56.923 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:05:56.925 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 115.804ms
+2022-08-16 12:05:56.926 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:05:56.932 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/17 - - - 200 2 application/json;+charset=utf-8 130.7583ms
+2022-08-16 12:06:02.166 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/16 - -
+2022-08-16 12:06:02.172 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:06:02.173 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/16 - - - 204 - - 6.2976ms
+2022-08-16 12:06:02.174 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/16 - -
+2022-08-16 12:06:02.175 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:06:02.176 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:06:02.177 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:06:02.187 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:06:02.193 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:06:02.200 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:06:02.206 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:06:02.206 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 20.5992ms
+2022-08-16 12:06:02.208 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:06:02.209 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/16 - - - 200 2 application/json;+charset=utf-8 35.1107ms
+2022-08-16 12:06:40.644 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product - -
+2022-08-16 12:06:40.653 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:06:40.654 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product - - - 204 - - 9.8381ms
+2022-08-16 12:06:40.658 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json 250
+2022-08-16 12:06:40.659 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:06:40.660 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:06:40.660 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:08:00.694 +02:00 [INF] User profile is available. Using 'C:\Users\Swift LTD\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-08-16 12:08:05.085 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:08:06.524 +02:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-08-16 12:08:06.687 +02:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2022-08-16 12:08:06.937 +02:00 [INF] Now listening on: http://localhost:57679
+2022-08-16 12:08:06.968 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-08-16 12:08:06.970 +02:00 [INF] Hosting environment: Development
+2022-08-16 12:08:06.972 +02:00 [INF] Content root path: D:\Tests\Grower\src\Grower.Web\
+2022-08-16 12:08:07.434 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:08:07.496 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:08:07.570 +02:00 [WRN] Failed to determine the https port for redirect.
+2022-08-16 12:08:07.637 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:08:07.690 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:08:07.848 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:08:08.742 +02:00 [INF] Executed DbCommand (179ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:08:09.045 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:08:09.331 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 1606.6312ms
+2022-08-16 12:08:09.338 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:08:09.386 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 1962.6806ms
+2022-08-16 12:08:28.268 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product - -
+2022-08-16 12:08:28.270 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:08:28.273 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product - - - 204 - - 5.8690ms
+2022-08-16 12:08:28.278 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json 249
+2022-08-16 12:08:28.279 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:08:28.286 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:08:28.306 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:08:38.366 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:08:38.744 +02:00 [INF] Executed DbCommand (65ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Availability], [Description], [GrowerId], [Image], [Price], [ProductName], [ProductTypeId], [Quatity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 12:08:38.866 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Responses.ProductResponse'.
+2022-08-16 12:08:38.876 +02:00 [INF] Executed action Grower.Web.Api.ProductController.CreateProduct (Grower.Web) in 10563.3133ms
+2022-08-16 12:08:38.879 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:08:38.881 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/api/Product application/json 249 - 200 305 application/json;+charset=utf-8 10602.9615ms
+2022-08-16 12:08:42.796 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:08:42.798 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:08:42.800 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:08:42.809 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:08:42.829 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:08:43.343 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:08:43.382 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:08:43.387 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 571.2289ms
+2022-08-16 12:08:43.390 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:08:43.393 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 3540 application/json;+charset=utf-8 597.1091ms
+2022-08-16 12:09:11.797 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:09:11.803 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:11.804 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:09:11.804 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:09:11.807 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:09:11.817 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:09:11.832 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:09:11.835 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 28.3204ms
+2022-08-16 12:09:11.836 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:09:11.837 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 40.3852ms
+2022-08-16 12:09:13.092 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/15 - -
+2022-08-16 12:09:13.093 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:13.094 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/15 - - - 204 - - 2.7063ms
+2022-08-16 12:09:13.096 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/15 - -
+2022-08-16 12:09:13.097 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:13.105 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:13.112 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:09:13.162 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:09:13.185 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:09:13.221 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:09:13.246 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:09:13.248 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 127.7965ms
+2022-08-16 12:09:13.254 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:13.255 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/15 - - - 200 2 application/json;+charset=utf-8 159.6474ms
+2022-08-16 12:09:16.368 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/18 - -
+2022-08-16 12:09:16.370 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:16.371 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/18 - - - 204 - - 2.8520ms
+2022-08-16 12:09:16.373 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/18 - -
+2022-08-16 12:09:16.374 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:16.375 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:16.376 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:09:16.379 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:09:16.388 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:09:16.395 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:09:16.404 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:09:16.405 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 27.8175ms
+2022-08-16 12:09:16.407 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:16.408 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/18 - - - 200 2 application/json;+charset=utf-8 34.8335ms
+2022-08-16 12:09:24.368 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/14 - -
+2022-08-16 12:09:24.370 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:24.371 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/14 - - - 204 - - 3.2148ms
+2022-08-16 12:09:24.374 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/14 - -
+2022-08-16 12:09:24.375 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:24.376 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:24.377 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:09:24.379 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:09:24.384 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:09:24.392 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:09:24.397 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:09:24.398 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 19.7415ms
+2022-08-16 12:09:24.400 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:24.402 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/14 - - - 200 2 application/json;+charset=utf-8 28.4206ms
+2022-08-16 12:09:28.842 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/8 - -
+2022-08-16 12:09:28.844 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:28.845 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/8 - - - 204 - - 2.5409ms
+2022-08-16 12:09:28.849 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/8 - -
+2022-08-16 12:09:28.850 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:28.851 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:28.852 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:09:28.856 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:09:28.860 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:09:28.866 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:09:28.873 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:09:28.874 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 18.701ms
+2022-08-16 12:09:28.876 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:28.878 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/8 - - - 200 1 application/json;+charset=utf-8 28.8923ms
+2022-08-16 12:09:31.399 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/19 - -
+2022-08-16 12:09:31.401 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:31.403 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/19 - - - 204 - - 4.0128ms
+2022-08-16 12:09:31.404 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/19 - -
+2022-08-16 12:09:31.405 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:31.406 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:31.407 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:09:31.410 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:09:31.413 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:09:31.423 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:09:31.427 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:09:31.428 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 19.0463ms
+2022-08-16 12:09:31.429 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:31.431 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/19 - - - 200 2 application/json;+charset=utf-8 26.1994ms
+2022-08-16 12:09:33.554 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product/13 - -
+2022-08-16 12:09:33.555 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:33.556 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product/13 - - - 204 - - 2.6918ms
+2022-08-16 12:09:33.557 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/api/Product/13 - -
+2022-08-16 12:09:33.558 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:09:33.559 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:33.560 +02:00 [INF] Route matched with {action = "Delete", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:09:33.564 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:09:33.571 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__productID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productID_0
+2022-08-16 12:09:33.581 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Products]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-08-16 12:09:33.589 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2022-08-16 12:09:33.591 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Delete (Grower.Web) in 27.701ms
+2022-08-16 12:09:33.592 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Delete (Grower.Web)'
+2022-08-16 12:09:33.594 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/api/Product/13 - - - 200 2 application/json;+charset=utf-8 36.3386ms
+2022-08-16 12:10:04.675 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:57679/api/Product - -
+2022-08-16 12:10:04.677 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:10:04.678 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:57679/api/Product - - - 204 - - 2.8734ms
+2022-08-16 12:10:04.683 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/api/Product application/json 305
+2022-08-16 12:10:04.684 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:10:04.686 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:10:04.687 +02:00 [INF] Route matched with {action = "CreateProduct", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Grower.Web.Responses.ProductResponse]] CreateProduct(Grower.Web.Commands.CreateProductCommand) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:10:40.275 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:10:40.307 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (Size = 4000), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Availability], [Description], [GrowerId], [Image], [Price], [ProductName], [ProductTypeId], [Quatity])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Products]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-08-16 12:10:47.327 +02:00 [INF] Executing OkObjectResult, writing value of type 'Grower.Web.Responses.ProductResponse'.
+2022-08-16 12:10:47.345 +02:00 [INF] Executed action Grower.Web.Api.ProductController.CreateProduct (Grower.Web) in 42652.0566ms
+2022-08-16 12:10:47.349 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.CreateProduct (Grower.Web)'
+2022-08-16 12:10:47.358 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/api/Product application/json 305 - 200 359 application/json;+charset=utf-8 42674.9185ms
+2022-08-16 12:11:05.662 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:11:05.664 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:11:05.665 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:11:05.693 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:11:05.701 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:11:05.712 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:11:05.713 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 22.0199ms
+2022-08-16 12:11:05.714 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:11:05.716 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 53.5712ms
+2022-08-16 12:13:05.350 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:13:05.356 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:13:05.358 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:13:05.359 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:13:05.363 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:13:05.371 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:13:05.376 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:13:05.377 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 15.3301ms
+2022-08-16 12:13:05.379 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:13:05.381 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 31.0424ms
+2022-08-16 12:13:31.345 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:13:31.355 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:13:31.361 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:13:31.363 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:13:31.369 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:13:31.380 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:13:31.387 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:13:31.394 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 26.4606ms
+2022-08-16 12:13:31.398 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:13:31.403 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 58.3975ms
+2022-08-16 12:13:35.482 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:13:35.484 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:13:35.486 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:13:35.488 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:13:35.491 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:13:35.494 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:13:35.497 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:13:35.498 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 8.025ms
+2022-08-16 12:13:35.506 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:13:35.508 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 26.1850ms
+2022-08-16 12:13:37.683 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:13:37.683 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:13:37.685 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:13:37.686 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:13:37.688 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:13:37.689 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:13:37.691 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:13:37.692 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:13:37.696 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:13:37.699 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:13:37.703 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:13:37.729 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:13:37.735 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 40.2367ms
+2022-08-16 12:13:37.741 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:13:37.742 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:13:37.744 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:13:37.745 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 61.6242ms
+2022-08-16 12:13:37.746 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 48.8865ms
+2022-08-16 12:13:37.758 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:13:37.759 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 76.0716ms
+2022-08-16 12:15:39.607 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:15:39.620 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:15:39.622 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:15:39.629 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:15:39.633 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:15:39.634 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:15:39.639 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:15:39.641 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:15:39.645 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:15:39.655 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:15:39.665 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:15:39.667 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:15:39.672 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:15:39.676 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:15:39.682 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 38.123ms
+2022-08-16 12:15:39.687 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 33.2961ms
+2022-08-16 12:15:39.689 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:15:39.695 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:15:39.698 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 91.6899ms
+2022-08-16 12:15:39.702 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 81.9732ms
+2022-08-16 12:16:01.381 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:16:01.391 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:16:01.399 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:16:01.400 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:16:01.404 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:16:01.405 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:16:01.410 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:16:01.412 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:16:01.416 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:16:01.427 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:16:01.431 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:16:01.437 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:16:01.443 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:16:01.452 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:16:01.457 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 41.2513ms
+2022-08-16 12:16:01.460 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 33.8165ms
+2022-08-16 12:16:01.461 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:16:01.468 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:16:01.470 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 89.6553ms
+2022-08-16 12:16:01.474 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 92.9277ms
+2022-08-16 12:16:31.120 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:16:31.134 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:16:31.135 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:16:31.137 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:16:31.146 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:16:31.156 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:16:31.167 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:16:31.169 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 25.1342ms
+2022-08-16 12:16:31.171 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:16:31.178 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 58.6495ms
+2022-08-16 12:17:31.121 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:17:31.132 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:17:31.133 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:17:31.135 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:17:31.140 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:17:31.154 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:17:31.167 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:17:31.170 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 31.7453ms
+2022-08-16 12:17:31.172 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:17:31.175 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 53.6830ms
+2022-08-16 12:17:35.741 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:17:35.743 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:17:35.744 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:17:35.747 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:17:35.752 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:17:35.757 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:17:35.767 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:17:35.770 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 19.3437ms
+2022-08-16 12:17:35.772 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:17:35.774 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 32.8543ms
+2022-08-16 12:17:44.478 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:17:44.480 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:17:44.481 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:17:44.482 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:17:44.484 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:17:44.488 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:17:44.490 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:17:44.492 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 8.654ms
+2022-08-16 12:17:44.494 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:17:44.501 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 22.3131ms
+2022-08-16 12:17:58.312 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:17:58.312 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:17:58.313 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:17:58.314 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:17:58.315 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:17:58.316 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:17:58.317 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:17:58.319 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:17:58.323 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:17:58.330 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:17:58.335 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:17:58.338 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:17:58.353 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:17:58.356 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:17:58.361 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 38.3758ms
+2022-08-16 12:17:58.366 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 36.5037ms
+2022-08-16 12:17:58.367 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:17:58.369 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:17:58.370 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 58.3634ms
+2022-08-16 12:17:58.371 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 59.0926ms
+2022-08-16 12:20:45.098 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:20:45.108 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:20:45.116 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:20:45.117 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:20:45.118 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:20:45.119 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:20:45.121 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:20:45.122 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:20:45.125 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:20:45.133 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:20:45.142 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:20:45.145 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:20:45.149 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:20:45.154 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:20:45.155 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 22.8098ms
+2022-08-16 12:20:45.163 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 38.7638ms
+2022-08-16 12:20:45.165 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:20:45.166 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:20:45.168 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 60.1668ms
+2022-08-16 12:20:45.169 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 72.1785ms
+2022-08-16 12:21:56.360 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:21:56.366 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:21:56.372 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:21:56.375 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:21:56.377 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:21:56.379 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:21:56.381 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:21:56.384 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:21:56.393 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:21:56.400 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:21:56.408 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:21:56.415 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:21:56.415 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:21:56.416 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 24.7824ms
+2022-08-16 12:21:56.429 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:21:56.430 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:21:56.432 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 32.9494ms
+2022-08-16 12:21:56.437 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 76.7925ms
+2022-08-16 12:21:56.438 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:21:56.444 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 78.2936ms
+2022-08-16 12:22:39.716 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:22:39.731 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:22:39.742 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:22:39.743 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:22:39.745 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:22:39.748 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:22:39.749 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:22:39.755 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:22:39.763 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:22:39.771 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:22:39.778 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:22:39.786 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:22:39.796 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:22:39.809 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:22:39.812 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 50.1532ms
+2022-08-16 12:22:39.819 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 49.6595ms
+2022-08-16 12:22:39.824 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:22:39.827 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:22:39.833 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 116.5519ms
+2022-08-16 12:22:39.835 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 104.8783ms
+2022-08-16 12:22:47.128 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:22:47.132 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:22:47.134 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:22:47.136 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:22:47.138 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:22:47.142 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:22:47.147 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:22:47.159 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:22:47.161 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:22:47.165 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:22:47.171 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:22:47.189 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:22:47.198 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 57.5855ms
+2022-08-16 12:22:47.201 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:22:47.211 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:22:47.229 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:22:47.231 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 103.6023ms
+2022-08-16 12:22:47.239 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 69.0102ms
+2022-08-16 12:22:47.252 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:22:47.255 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 117.1954ms
+2022-08-16 12:22:56.387 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:22:56.387 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:22:56.397 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:22:56.403 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:22:56.404 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:22:56.409 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:22:56.412 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:22:56.410 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:22:56.421 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:22:56.429 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:22:56.439 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:22:56.445 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:22:56.449 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:22:56.452 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 31.7065ms
+2022-08-16 12:22:56.459 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:22:56.460 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:22:56.463 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 36.1671ms
+2022-08-16 12:22:56.470 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 82.4725ms
+2022-08-16 12:22:56.472 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:22:56.477 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 89.9481ms
+2022-08-16 12:23:00.304 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:23:00.305 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:00.307 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:23:00.307 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:00.308 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:00.310 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:23:00.311 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:00.315 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:00.316 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:23:00.320 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:23:00.324 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:00.334 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:00.337 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:23:00.339 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 24.2608ms
+2022-08-16 12:23:00.350 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:00.352 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:00.355 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 32.3379ms
+2022-08-16 12:23:00.362 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 57.9594ms
+2022-08-16 12:23:00.368 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:00.373 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 66.7325ms
+2022-08-16 12:23:08.951 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:23:08.955 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:08.956 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:23:08.957 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:08.958 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:08.961 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:23:08.963 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:08.973 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:08.973 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:23:08.982 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:23:08.991 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:09.002 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:09.010 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:23:09.018 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 46.5545ms
+2022-08-16 12:23:09.022 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:09.024 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:09.026 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 36.51ms
+2022-08-16 12:23:09.028 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 77.1839ms
+2022-08-16 12:23:09.031 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:09.035 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 79.2127ms
+2022-08-16 12:23:10.223 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:23:10.225 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:10.227 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:23:10.228 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:10.230 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:10.232 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:23:10.233 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:10.238 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:10.239 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:23:10.249 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:23:10.256 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:10.266 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:10.271 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:23:10.272 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 34.7983ms
+2022-08-16 12:23:10.284 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:10.285 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:10.291 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 36.3061ms
+2022-08-16 12:23:10.293 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 70.2995ms
+2022-08-16 12:23:10.298 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:10.303 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 75.1571ms
+2022-08-16 12:23:16.845 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:23:16.845 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:23:16.848 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:16.850 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:23:16.851 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:16.853 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:16.855 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:23:16.856 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:23:16.861 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:16.870 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:23:16.911 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:23:16.914 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:23:16.923 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:16.933 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:23:16.935 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 75.2338ms
+2022-08-16 12:23:16.938 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 68.4774ms
+2022-08-16 12:23:16.943 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:23:16.945 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:23:16.949 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 103.8268ms
+2022-08-16 12:23:16.950 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 105.0340ms
+2022-08-16 12:26:12.422 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/Product/1 - -
+2022-08-16 12:26:12.430 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/api/ProductType - -
+2022-08-16 12:26:12.443 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:26:12.443 +02:00 [INF] CORS policy execution successful.
+2022-08-16 12:26:12.448 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:26:12.450 +02:00 [INF] Executing endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:26:12.454 +02:00 [INF] Route matched with {action = "Get", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller Grower.Web.Api.ProductController (Grower.Web).
+2022-08-16 12:26:12.456 +02:00 [INF] Route matched with {action = "Get", controller = "ProductType", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller Grower.Web.Api.ProductTypeController (Grower.Web).
+2022-08-16 12:26:12.462 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:26:12.471 +02:00 [INF] Entity Framework Core 6.0.5 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2022-08-16 12:26:12.479 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__growerId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Availability], [p].[Description], [p].[GrowerId], [p].[Image], [p].[Price], [p].[ProductName], [p].[ProductTypeId], [p].[Quatity], [p0].[Id], [p0].[ProductTypeName]
+FROM [Products] AS [p]
+INNER JOIN [ProductTypes] AS [p0] ON [p].[ProductTypeId] = [p0].[Id]
+WHERE [p].[GrowerId] = @__growerId_0
+2022-08-16 12:26:12.481 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ProductTypeName]
+FROM [ProductTypes] AS [p]
+2022-08-16 12:26:12.493 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:26:12.503 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Grower.Web.Responses.ProductTypeResponse, Grower.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-08-16 12:26:12.505 +02:00 [INF] Executed action Grower.Web.Api.ProductController.Get (Grower.Web) in 44.5887ms
+2022-08-16 12:26:12.507 +02:00 [INF] Executed action Grower.Web.Api.ProductTypeController.Get (Grower.Web) in 37.8437ms
+2022-08-16 12:26:12.512 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductController.Get (Grower.Web)'
+2022-08-16 12:26:12.513 +02:00 [INF] Executed endpoint 'Grower.Web.Api.ProductTypeController.Get (Grower.Web)'
+2022-08-16 12:26:12.517 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/Product/1 - - - 200 1925 application/json;+charset=utf-8 96.1914ms
+2022-08-16 12:26:12.519 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/api/ProductType - - - 200 75 application/json;+charset=utf-8 89.4655ms

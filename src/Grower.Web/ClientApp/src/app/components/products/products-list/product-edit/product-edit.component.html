@@ -131,13 +131,13 @@
   <div class="form-group text-center mb-3">
     <label class="control-label"> Availability </label>
     <label class="radio-inline m-3">
-      <input type="radio" value="true" formControlName="availability" /> Yes
+      <input type="radio" value="true"  formControlName="availability"  [checked]="true"/> Yes
     </label>
     <label class="radio-inline m-3">
       <input
         type="radio"
         value="false"
-        formControlName="availability"
+        formControlName="availability"  [checked]="false"
         class="ml-5"
       />
       No
@@ -156,7 +156,12 @@
     <button class="btn btn-danger text-center" type="button" (click)="Cancel()">
       Cancel
     </button>
-    <button class="btn btn-danger text-center m-2" *ngIf="editMode" type="button" (click)="Delete()">
+    <button
+      class="btn btn-danger text-center m-2"
+      *ngIf="editMode"
+      type="button"
+      (click)="Delete()"
+    >
       Delete
     </button>
   </div>
