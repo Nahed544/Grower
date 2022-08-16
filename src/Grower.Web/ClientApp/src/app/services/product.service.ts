@@ -30,7 +30,7 @@ export class ProductService {
   }
 
   fetchProducts() {  
-     return this.httpClient.get<Product[]>(this.baseUrl + 'Product?growerId=' + this.growerId).pipe(
+     return this.httpClient.get<Product[]>(this.baseUrl + 'Product/' + this.growerId).pipe(
       map((res: Product[]) => {
         return res;
       }), tap((result) => { this.products = result; }

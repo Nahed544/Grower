@@ -8,9 +8,9 @@ using Grower.Core.Entities;
 
 namespace Grower.Core.Repository;
 public interface IProductRepository : IRepository<Grower.Core.Entities.Product>
-{ 
-  Task<IEnumerable<Product>> GetAllProductByName(string lastname);
+{  
   Task<List<Product>> GetAllProductByGrowerId(int growerId);
+  Task Delete(int productID);
 }
 
  

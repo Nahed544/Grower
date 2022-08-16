@@ -19,10 +19,10 @@ public class ProductController :BaseApiController
     _repository = repository;
   }
 
-  [HttpGet]
-  public async Task<IActionResult> Get(int growerId)
+  [HttpGet("{id}")]
+  public async Task<IActionResult> Get(int id)
   {
-    var products =  await _mediator.Send(new GetProductsByGrowerId(growerId));
+    var products =  await _mediator.Send(new GetProductsByGrowerId(id));
     return Ok(products);
   }
   [HttpPost]
@@ -30,6 +30,14 @@ public class ProductController :BaseApiController
   {
     var result = await _mediator.Send(command);
     return Ok(result);
+  }
+
+  [HttpDelete("{id}")]
+  public async Task<ActionResult> Delete(int id)
+  {
+    var result = await _mediator.Send(new DeleteProductByIdCommand (id));
+    return Ok(result);
+   
   }
 
 }

@@ -8,6 +8,7 @@ using Grower.Core.Repository;
 using Grower.Core.Repository.Base;
 using Grower.Infrastructure.Data;
 using Grower.Infrastructure.Repositories.Base;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Grower.Infrastructure.Repositories;
@@ -19,6 +20,14 @@ public class ProductRepository : Repository<Product>, IProductRepository
     _dbContext = dbContext;
   }
 
+  public async Task Delete(int productID)
+  {
+    var product = await _dbContext.Products.Where(a => a.Id == productID).FirstOrDefaultAsync();
+    _dbContext.Products.Remove(product);
+    await _dbContext.SaveChangesAsync();
+     
+  }
+
   public async Task<List<Product>> GetAllProductByGrowerId(int growerId)
   {
     List<Product> products = new List<Product>();
@@ -27,9 +36,6 @@ public class ProductRepository : Repository<Product>, IProductRepository
  
   }
 
-  public Task<IEnumerable<Product>> GetAllProductByName(string lastname)
-  {
-    throw new NotImplementedException();
-  }
+   
 }
 

@@ -15,8 +15,9 @@ import { ProductType } from "../models/productType.model";
 
     }
     getProductTypes() {
+      console.log("start")
         if( !this.productTypes || this.productTypes?.length <= 0)
-        {    
+        {   
           this.fetchProductTypes();
         } 
         return this.productTypes ;
@@ -28,10 +29,6 @@ import { ProductType } from "../models/productType.model";
             return res;
           }),
            tap((result) => { this.productTypes= result; }
-          //  ,
-          //  (error)=>{
-          //   console.log(error)
-          // }
           )
         );
       }
