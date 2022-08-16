@@ -8,7 +8,12 @@
     <WebProjectMode>true</WebProjectMode>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Farmer.ico</ApplicationIcon>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Content Include="Farmer.ico" />
+  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Ardalis.ApiEndpoints" />
@@ -28,6 +33,33 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Grower.Infrastructure\Grower.Infrastructure.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>C:\Users\Swift LTD\.nuget\packages\automapper\11.0.1\lib\netstandard2.1\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR">
+      <HintPath>C:\Users\Swift LTD\.nuget\packages\mediatr\10.0.1\lib\netstandard2.1\MediatR.dll</HintPath>
+    </Reference>
+    <Reference Include="MediatR.Extensions.Microsoft.DependencyInjection">
+      <HintPath>C:\Users\Swift LTD\.nuget\packages\mediatr.extensions.microsoft.dependencyinjection\10.0.1\lib\netstandard2.1\MediatR.Extensions.Microsoft.DependencyInjection.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   
 </Project>
