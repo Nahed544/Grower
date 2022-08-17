@@ -1,8 +1,8 @@
 ﻿using Grower.Core.Repository;
-using Grower.Web.Commands;
+using Grower.Core.Commands;
 using MediatR;
 
-namespace Grower.Web.Handlers;
+namespace Grower.Core.Handlers;
 
 public class DeleteProductByIdHandler : IRequestHandler<DeleteProductByIdCommand ,int>
 {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Grower.Web.Mappers;
+namespace Grower.Core.Mappers;
 
 public class GrowerMapper
 {  

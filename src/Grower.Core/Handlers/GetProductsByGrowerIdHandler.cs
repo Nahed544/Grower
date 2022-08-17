@@ -1,11 +1,11 @@
-﻿using Grower.Web.Responses; 
+﻿using Grower.Core.Responses; 
 using MediatR;
 using Grower.Core.Repository;
-using Grower.Web.Mappers;
+using Grower.Core.Mappers;
 using Grower.Core.Entities;
-using Grower.Web.Queries;
+using Grower.Core.Queries;
 
-namespace Grower.Web.Handlers;
+namespace Grower.Core.Handlers;
 
 public class GetProductsByGrowerIdHandler : IRequestHandler<GetProductsByGrowerId, List<ProductResponse>>
 {

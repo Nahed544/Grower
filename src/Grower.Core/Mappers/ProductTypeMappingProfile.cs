@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Grower.Core.Entities;
-using Grower.Web.Responses;
+using Grower.Core.Responses;
 
-namespace Grower.Web.Mappers;
+namespace Grower.Core.Mappers;
 
 public class ProductTypeMappingProfile : Profile
 {

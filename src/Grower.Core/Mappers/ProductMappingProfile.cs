@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Grower.Core.Entities;
-using Grower.Web.Commands;
-using Grower.Web.Queries;
-using Grower.Web.Responses;
+using Grower.Core.Commands;
+using Grower.Core.Queries;
+using Grower.Core.Responses;
 
-namespace Grower.Web.Mappers;
+namespace Grower.Core.Mappers;
 
 public class ProductMappingProfile : Profile
 {

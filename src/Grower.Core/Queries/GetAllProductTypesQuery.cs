@@ -1,7 +1,7 @@
-﻿using Grower.Web.Responses;
+﻿using Grower.Core.Responses;
 using MediatR;
 
-namespace Grower.Web.Queries;
+namespace Grower.Core.Queries;
 
 public class GetAllProductTypesQuery : IRequest<List<ProductTypeResponse>>
 {

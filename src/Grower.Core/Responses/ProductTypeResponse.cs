@@ -1,4 +1,4 @@
-﻿namespace Grower.Web.Responses;
+﻿namespace Grower.Core.Responses;
 
 public class ProductTypeResponse
 {

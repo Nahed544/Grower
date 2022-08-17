@@ -1,11 +1,11 @@
-﻿using Grower.Web.Responses;
-using Grower.Web.Commands;
+﻿using Grower.Core.Responses;
+using Grower.Core.Commands;
 using MediatR;
 using Grower.Core.Repository;
 using Grower.Core.Entities;
-using Grower.Web.Mappers;
+using Grower.Core.Mappers;
 
-namespace Grower.Web.Handlers;
+namespace Grower.Core.Handlers;
 
 public class CreateProductHandler : IRequestHandler<CreateProductCommand, ProductResponse>
 {
