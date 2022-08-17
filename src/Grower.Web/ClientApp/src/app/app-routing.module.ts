@@ -1,32 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { ProductEditComponent } from './components/products/products-list/product-edit/product-edit.component';
-import { ProductsComponent } from './components/products/products.component';
-import { ProductResolverService } from './resolvers/product-list.resolver';
-import { ProductTypeResolverService } from './resolvers/ProductType.resolver';
 
 const appRoutes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/products' },
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
   {
-    path: '',
-    children: [
-      {
-        path: 'products',
-        component: ProductsComponent,
-        resolve: [ProductResolverService],
-      },
-      {
-        path: 'products/new',
-        component: ProductEditComponent,
-        resolve: [ProductTypeResolverService],
-      },
-      {
-        path: 'products/:id/edit',
-        component: ProductEditComponent,
-        resolve: [ProductResolverService, ProductTypeResolverService],
-      },
-    ],
+    path: 'products',
+    loadChildren: () =>
+      import('../app/components/products/product.module').then(
+        (m) => m.ProductsModule
+      ),
   },
 ];
 
