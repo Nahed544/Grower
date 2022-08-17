@@ -1,8 +1,8 @@
 ﻿using Grower.Core.Entities;
-using Grower.Web.Responses;
+using Grower.Core.Responses;
 using MediatR;
 
-namespace Grower.Web.Queries;
+namespace Grower.Core.Queries;
 
 public class GetProductsByGrowerId :IRequest<List<ProductResponse>>
 {

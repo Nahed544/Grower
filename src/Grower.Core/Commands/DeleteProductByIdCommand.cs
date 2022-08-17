@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Grower.Web.Commands;
+namespace Grower.Core.Commands;
 
 public class DeleteProductByIdCommand : IRequest<int>
 {

@@ -5,12 +5,9 @@ using AutoMapper;
 using Grower.Core.Repository;
 using Grower.Core.Repository.Base;
 using Grower.Infrastructure.Repositories;
-using Grower.Infrastructure.Repositories.Base;
-using Grower.Web.Handlers;
-using Grower.Web.Mappers;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
+using Grower.Infrastructure.Repositories.Base; 
+using Grower.Core.Mappers;
+using MediatR; 
 
 namespace Grower.Web.Extensions;
 

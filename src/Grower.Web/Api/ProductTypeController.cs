@@ -1,7 +1,7 @@
 ﻿
 using Grower.Core.Entities;
 using Grower.Core.Repository.Base;
-using Grower.Web.Queries;
+using Grower.Core.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 namespace Grower.Web.Api;

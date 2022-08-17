@@ -1,11 +1,11 @@
 ﻿using Grower.Core.Entities;
 using Grower.Core.Repository;
-using Grower.Web.Mappers;
-using Grower.Web.Queries;
-using Grower.Web.Responses;
+using Grower.Core.Mappers;
+using Grower.Core.Queries;
+using Grower.Core.Responses;
 using MediatR; 
 
-namespace Grower.Web.Handlers;
+namespace Grower.Core.Handlers;
 
 public class GetAllProductTypesHandler : IRequestHandler<GetAllProductTypesQuery, List<ProductTypeResponse>>
 {

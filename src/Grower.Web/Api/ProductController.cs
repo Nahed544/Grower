@@ -1,8 +1,8 @@
 ﻿using Grower.Core.Entities;
 using Grower.Core.Repository.Base;
-using Grower.Web.Commands;
-using Grower.Web.Queries;
-using Grower.Web.Responses;
+using Grower.Core.Commands;
+using Grower.Core.Queries;
+using Grower.Core.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
