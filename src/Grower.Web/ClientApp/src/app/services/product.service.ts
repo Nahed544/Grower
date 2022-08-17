@@ -42,8 +42,7 @@ export class ProductService {
   }
 
   addProduct(product: Product) {
-    product.growerId = 1;
-    console.log(product)
+    product.growerId = 1; 
     return this.httpClient.post(this.baseUrl + 'Product', product).pipe(
       tap(() => {
         this.products.push(product);
@@ -53,13 +52,29 @@ export class ProductService {
   }
 
   deleteProduct(id: number) {
-    return this.httpClient.delete(this.baseUrl + 'Product/' + id).pipe(
+    return this.httpClient.delete(this.baseUrl + 'Product/'+ id).pipe(
       tap(() => {
         const indexOfProduct = this.products.findIndex((product) => {
           return product.id === id;
         });
         if (indexOfProduct && indexOfProduct > 0) {
           this.products.splice(indexOfProduct, 1);
+          this.productsChanged.next(this.products.slice());
+        }
+      })
+    );
+  }
+  updateProduct(product : Product , productId : number) {
+    product.growerId = 1; 
+    product.id= productId ;
+    
+    return this.httpClient.put<Product>(this.baseUrl + 'Product', product).pipe(
+      tap(() => {  
+        const indexOfProduct = this.products.findIndex((_product) => {
+          return _product.id === product.id;
+        });
+        if (indexOfProduct && indexOfProduct > 0) {
+          this.products[indexOfProduct] = product ;
           this.productsChanged.next(this.products.slice());
         }
       })

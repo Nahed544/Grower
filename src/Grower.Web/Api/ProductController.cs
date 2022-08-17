@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Grower.Web.Api;
 
- 
-public class ProductController :BaseApiController
+
+public class ProductController : BaseApiController
 {
   private readonly IMediator _mediator;
   private readonly IRepository<Product> _repository;
-  public ProductController(IMediator mediator , IRepository<Product> repository)
+  public ProductController(IMediator mediator, IRepository<Product> repository)
   {
     _mediator = mediator;
     _repository = repository;
@@ -22,7 +22,7 @@ public class ProductController :BaseApiController
   [HttpGet("{id}")]
   public async Task<IActionResult> Get(int id)
   {
-    var products =  await _mediator.Send(new GetProductsByGrowerId(id));
+    var products = await _mediator.Send(new GetProductsByGrowerId(id));
     return Ok(products);
   }
   [HttpPost]
@@ -35,9 +35,22 @@ public class ProductController :BaseApiController
   [HttpDelete("{id}")]
   public async Task<ActionResult> Delete(int id)
   {
-    var result = await _mediator.Send(new DeleteProductByIdCommand (id));
+    var result = await _mediator.Send(new DeleteProductByIdCommand(id));
     return Ok(result);
-   
+
   }
 
+  [HttpPut]
+  public async Task<ActionResult<bool>> UpdateProduct([FromBody] UpdateProductCommand command)
+  {
+    if (command == null || !ModelState.IsValid)
+    {
+      return BadRequest();
+    }
+    var result = await _mediator.Send(command);
+    if (result)
+      return Ok(result);
+    else
+      return NoContent();
+  }
 }

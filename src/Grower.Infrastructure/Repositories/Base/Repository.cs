@@ -35,7 +35,8 @@ public class Repository<T> : IRepository<T> where T : class
   {
     return await _dbContext.Set<T>().FindAsync(id);
   }
-  public Task UpdateAsync(T entity)
+   
+  Task<bool> IRepository<T>.UpdateAsync(T entity)
   {
     throw new NotImplementedException();
   }
