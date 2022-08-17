@@ -7,10 +7,10 @@ using Grower.Core.Entities;
  using Grower.Core.Repository.Base;
 
 namespace Grower.Core.Repository;
-public interface IProductRepository : IRepository<Grower.Core.Entities.Product>
+public interface IProductRepository : IRepository< Product>
 {  
   Task<List<Product>> GetAllProductByGrowerId(int growerId);
-  Task Delete(int productID);
+  Task Delete(int productID); 
 }
 
  

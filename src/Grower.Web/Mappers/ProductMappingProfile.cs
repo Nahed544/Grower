@@ -19,6 +19,7 @@ public class ProductMappingProfile : Profile
   ;
 
     CreateMap< Product, CreateProductCommand >().ReverseMap();
-     
+    CreateMap< Product, UpdateProductCommand >().ReverseMap();
+
   }
 }
