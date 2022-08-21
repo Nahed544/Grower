@@ -10,6 +10,7 @@ namespace Grower.Core.Repository;
 public interface IProductRepository : IRepository< Product>
 {  
   Task<List<Product>> GetAllProductByGrowerId(int growerId);
+  Task<List<Product>> GetAllProducts();
   Task Delete(int productID); 
 }
 

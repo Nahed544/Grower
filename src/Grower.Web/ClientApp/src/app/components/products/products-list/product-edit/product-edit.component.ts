@@ -4,6 +4,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 import { ProductTypeService } from 'src/app/services/productType.service';
+import { UserService } from 'src/app/services/userService';
 
 @Component({
   selector: 'app-product-edit',
@@ -21,7 +22,7 @@ export class ProductEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private productTypeService: ProductTypeService,
-    private fb: FormBuilder
+    private fb: FormBuilder  
   ) {}
 
   ngOnInit(): void {

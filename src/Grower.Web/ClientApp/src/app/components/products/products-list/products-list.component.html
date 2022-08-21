@@ -1,25 +1,35 @@
- <!-- Start Featured Product -->
- <section class="bg-light">
-    <div class="container py-5">
-        <button class="btn btn-primary " (click)="onAdd()"> New Product </button>
-
-        <div class="row text-center py-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1">Featured Product</h1>
-                <p>
-                    Fruit and vegetables should be an important part of your daily diet.
-                     They are naturally good and contain vitamins and minerals that can help to keep you healthy. 
-                     They can also help protect against some diseases.
-                </p>
-            </div>
-        </div>
-        
-        <div class="row" *ngIf="products">  
-                <div *ngFor="let product of products" class="col-12 col-md-4 mb-4">
-                    <app-product-item [product] = "product"></app-product-item>
-                </div>
-            
-            
-        </div>
+<section class="bg-light">
+  <div class="container py-5">
+    <button class="btn btn-primary" (click)="onAdd()" *ngIf="isGrower">
+      New Product
+    </button>
+    <button
+      class="btn btn-primary"
+      [disabled]="selectionOrder.length <= 0"
+      (click)="createOrder()"
+      *ngIf="isCustomer"
+    >
+      Order
+    </button>
+    <div class="row text-center py-3">
+      <div class="col-lg-6 m-auto">
+        <h1 class="h1">Featured Product</h1>
+        <p>
+          Fruit and vegetables should be an important part of your daily diet.
+          They are naturally good and contain vitamins and minerals that can
+          help to keep you healthy. They can also help protect against some
+          diseases.
+        </p>
+      </div>
     </div>
-</section> 
+
+    <div class="row" *ngIf="products">
+      <div *ngFor="let product of products" class="col-12 col-md-4 mb-4">
+        <app-product-item
+          [product]="product"
+          [selectionOrder]="selectionOrder"
+        ></app-product-item>
+      </div>
+    </div>
+  </div>
+</section>
