@@ -1,24 +1,38 @@
-<div class="card h-100">
-    <a (click)="onEdit()">
-        <img [src]="product.image" 
-        style="height: 60vh" 
-        class="card-img-top" alt="...">
-    </a>
-    <div class="card-body">
-        <ul class="list-unstyled d-flex justify-content-between">
-            <li>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-warning fa fa-star"></i>
-                <i class="text-muted fa fa-star"></i>
-                <i class="text-muted fa fa-star"></i>
-            </li>
-            <li class="text-muted text-right">{{product.price}} LE</li>
-        </ul>
-        <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{product.productName}}</a>
+<div class="card h-100" (click)="selectOrder(product.id)">
+  <a (click)="onEdit()" >
+    <img
+      [src]="product.image"
+      style="height: 60vh"
+      class="card-img-top"
+      alt="..."
+    />
+  </a>
+  <div class="card-body" > 
+    <ul class="list-unstyled d-flex justify-content-between">
+      <li>
+        <i
+          class="fa fa-star"
+          [class]="product.availability ? 'text-success' : 'text-danger'"
+        >
+          {{ product.availability ? "Available" : "Not available" }}
+        </i>
+      </li>
+      <li class="text-muted text-right">{{ product.price }} LE</li>
+    </ul>
+    <p class="h2 text-decoration-none text-dark">
+      {{ product.productName }}
+    </p>
+    <div class="row">
+      <div class="col-6">
         <p class="card-text">
-            {{product.description}}
+          {{ product.description }}          
         </p>
-        <p class="text-muted"> </p>
-    </div>
+      </div>
+      <div class="col-6 text-end">
+        <button class="btn btn-success">Add to card</button>
+      </div>
+    </div> 
+    <p class="text-muted"></p>
+  </div>
+ 
 </div>

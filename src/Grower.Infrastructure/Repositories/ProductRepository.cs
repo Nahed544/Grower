@@ -29,6 +29,13 @@ public class ProductRepository : Repository<Product>, IProductRepository
 
   }
 
+  public async Task<List<Product>> GetAllProducts()
+  {
+    List<Product> products = new List<Product>();
+    products =  _dbContext.Products.Include(pt => pt.ProductType).ToList();
+    return products;
+  }
+
   public async Task<List<Product>> GetAllProductByGrowerId(int growerId)
   {
     List<Product> products = new List<Product>();

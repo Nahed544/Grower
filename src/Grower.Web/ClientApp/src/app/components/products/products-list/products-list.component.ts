@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
-import { Product } from 'src/app/models/product.model';
-import { ProductType } from 'src/app/models/productType.model';
-import { ProductService } from 'src/app/services/product.service';
-import { ProductTypeService } from 'src/app/services/productType.service';
+import { Router } from '@angular/router'; 
+import { RoleTypeEnum } from 'src/app/models/Enum/role.enum';
+import { Order } from 'src/app/models/order.model';
+import { ProductService } from 'src/app/services/product.service'; 
+import { UserService } from 'src/app/services/userService';
 
 @Component({
   selector: 'app-products-list',
@@ -11,14 +11,35 @@ import { ProductTypeService } from 'src/app/services/productType.service';
   styleUrls: ['./products-list.component.css'],
 })
 export class ProductsListComponent implements OnInit {
-  constructor(private router: Router, private productService: ProductService) {}
+  selectionOrder :Order []=[] ;
+  
+  constructor(private router: Router, private productService: ProductService ,
+    private userService:UserService) {}
 
-  ngOnInit(): void {}
+    
+  ngOnInit(): void {
+  }
 
   get products() {
     return this.productService.products;
   }
   onAdd() {
     this.router.navigate(['products/new']);
+  }
+  get currentUser() {
+    return this.userService._currenUser;
+  }
+  get isGrower() {
+    return this.currentUser.role.find(function (_role) {
+      return _role === RoleTypeEnum.grower;
+    });
+  } 
+  get isCustomer() {
+    return this.currentUser.role.find(function (_role) {
+      return _role === RoleTypeEnum.customer;
+    });
+  }
+  createOrder(){
+   console.log(this.selectionOrder.length)
   }
 }

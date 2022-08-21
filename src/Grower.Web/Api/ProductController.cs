@@ -53,4 +53,12 @@ public class ProductController : BaseApiController
     else
       return NoContent();
   }
+
+  [HttpGet] 
+  public async Task<ActionResult<ProductResponse>> GetAllProducts()
+  {
+    var products = await _mediator.Send(new GetAllProductsQuery());
+    return Ok(products);
+
+  }
 }

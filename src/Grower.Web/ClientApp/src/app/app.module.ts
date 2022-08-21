@@ -8,9 +8,11 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { OrdersComponent } from './components/orders/orders.component';
+import { OrderModalComponent } from './components/orders/order-modal/order-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, NavMenuComponent, HomeComponent],
+  declarations: [AppComponent, NavMenuComponent, HomeComponent, OrdersComponent, OrderModalComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,

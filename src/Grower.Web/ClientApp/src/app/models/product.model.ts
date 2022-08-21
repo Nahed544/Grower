@@ -1,7 +1,5 @@
 import { ProductType } from "./productType.model";
-
-
-
+ 
 export class Product {
   public id: number;
   public productName: string;
